@@ -25,9 +25,9 @@ function Contact() {
   useEffect(() => emailjs.init("KrSUxOq2ioFFTOXeR"), []);
  const classnames=classNames("p-2 rounded-2xl border-collapse  border-solid border-2 border-indigo-500 focus:outline-none focus:ring focus:ring-indigo-500 ")
   return (
-    <section className="text-center md:w-screen md:h-screen">
+    <section id="contactme" className="text-center md:w-screen md:h-screen">
         <div className="bg-gradient-to-b md:font-extrabold md:text-6xl sm:text-3xl text-xl  from-indigo-900 from-70% via-indigo-700 to-indigo-100 to-10% pb-20 py-10 m-auto text-white">
-        <h1 className>Please drop your Email and phone number</h1>
+        <h1 className="">Please drop your Email and phone number</h1>
         </div>
         <form ref={form}  className="sm:w-2/4 sm:m-auto sm:mt-10 mt-5 mx-2 grid sm:grid-cols-2 gap-4 " onSubmit={handleSubmit}>
           <input placeholder="enter yoou first name " 

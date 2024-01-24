@@ -8,12 +8,12 @@ import MobileNav from "./MobileNav"
 function PageNav({setDarkMode, darkMode}) {
      const {pathname}=useLocation()
      console.log(pathname)
-     const navname=pathname.split('/')?.[1]
+     const navname=pathname.split('#')?.[1]
      console.log(navname)
      const Linkess=(type)=>{
-    let className=classNames("hover:border-solid hover:border-y-2 hover:border-sky-500 px-3 py-2 transition-all duration-300 rounded  hover:font-bold ")
+    let className=classNames("hover:border-solid hover:border-y-2 hover:border-sky-500  px-3 py-2 transition-all duration-300 rounded  hover:font-bold ")
      if(type===navname){
-       className +=" text-blue-600";
+       className +=" text-blue-600 border-y-2 border-sky-500";
      }else {
      className +="";
      }

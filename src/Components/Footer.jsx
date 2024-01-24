@@ -15,14 +15,14 @@ function footer() {
         
           <div className="flex flex-col gap-4">
           <h1 className="font-extrabold">Visit Link</h1>
-          <Link to="/privancy" className="font-thin">Privancy</Link>
-          <Link to="/term" className="font-thin">Condition and Term</Link>
+          <a href="/privancy" className="font-thin">Privancy</a>
+          <a href="/term" className="font-thin">Condition and Term</a>
           </div>
           <div className="flex flex-col gap-4">
           <h1 className="font-extrabold">Portfolio</h1>
-          <Link to="/" className="font-thin">Home</Link>
-          <Link to="/aboutme" className="font-thin">About me</Link>
-          <Link to="/service" className="font-thin">Service</Link>
+          <a href="#" className="font-thin">Home</a>
+          <a href="#aboutme" className="font-thin">About me</a>
+          <a href="#service" className="font-thin">Service</a>
           </div>
          <div className="flex flex-col gap-4">
          <h1 className="font-extrabold">Contact</h1>

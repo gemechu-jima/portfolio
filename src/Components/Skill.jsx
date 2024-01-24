@@ -2,8 +2,8 @@
 
 function Skill() {
   return (
-    <section className="xl:w-screen xl:h-screen bg-black text-center flex items-center  flex-col text-white pb-7 sm:pb-1">
-    <div className="mt-5 text-6xl">
+    <section id="skill" className="xl:w-screen xl:h-screen bg-black text-center flex items-center flex-col text-white pb-7 sm:pb-1">
+    <div className="mt-14 text-6xl">
         <h1> My skill </h1>
     </div>
 

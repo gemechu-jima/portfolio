@@ -25,7 +25,7 @@ function HomePage() {
         <PageNav setDarkMode={setDarkMode} darkMode={darkMode} />
         <div className="flex md:justify-between md:flex-row flex-col md:h-screen w-full relative mx-auto dark:bg-black dark:text-white bg-slate-200 font-serif ">
         <RigthsideCta/>
-        <LeftSideCta/>
+        <LeftSideCta darkMode={darkMode}/>
         </div>
         <About darkMode={darkMode} />
         <Portfolio/>
