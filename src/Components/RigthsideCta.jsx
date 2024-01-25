@@ -7,8 +7,8 @@ function RigthsideCta() {
         loop:{}
     })
   return (
-    <aside className="flex flex-col items-center justify-center text-center gap-10 md:w-6/12 md:h-screen">
-        <h1 className="font-sans xl:text-5xl  md:text-3xl sm:text:xl text-3xl md:mt-2 ">
+    <aside className="flex flex-col items-center justify-center text-center sm:gap-10 gap-4 md:w-6/12 md:h-screen">
+        <h1 className="font-sans xl:text-5xl  md:text-3xl sm:text:xl text-3xl md:mt-2 mt-10">
             I am   <span className="text-green-500">
                 {text}
                </span>

@@ -1,12 +1,88 @@
 import { Link } from "react-router-dom"
+import {FaChevronLeft,FaChevronRight} from "react-icons/fa"
 import DateObject from "react-date-object"
+import { useState } from "react"
 
-  const date=new DateObject()
+const date=new DateObject()
+const images=[
+  {
+    id:1,
+    img_name:"image/image/babi.jpg"
+  },
+  {
+    id:2,
+    img_name:"image/image/istockphoto-490667270-1024x1024.jpg"
+  },
+  {
+    id:3,
+    img_name:"image/image/istockphoto-1049475350-1024x1024.jpg"
+  },
+  {
+    id:4,
+    img_name:"image/image/pexels-daniel-xavier-1121796.jpg"
+  },
+  {
+    id:5,
+    img_name:"image/image/pexels-italo-melo-2379004.jpg"
+  },
+  {
+    id:6,
+    img_name:"image/image/pexels-justin-shaifer-1222271.jpg"
+  },
+  {
+    id:7,
+    img_name:"image/image/pexels-spencer-selover-775358.jpg"
+  },
+  {
+    id:8,
+    img_name:"image/Mine.jpg"
+  },
+]
+
 function footer() {
+  const [index, setIndex]=useState(0)
+  const [scroll, setScroll]=useState(0)
+  window.addEventListener("scroll", ()=>{
+    const scrolable=document.getElementById("page").scrollWidth-window.innerWidth
+    const scrolled=window.scrollX
+    setScroll(scrolled)
+    
+  })
+ 
+  const prev=()=>{
+    setIndex(index-1)
+    const page=document.getElementById("page")
+    console.log(page?.scrollLeft)
+    page.scrollLeft=page.scrollLeft+500
+  }
+  const next=()=>{
+    setIndex(index+1)
+    const page=document.getElementById("page")
+    console.log(page?.scrollLeft)
+    page.scrollLeft=page.scrollLeft-500 
+  }
   return (
     <section className="w-screen h-screen bg-slate-500 relative" >
-      <div className="h-2/4 rounded-2xl left-16 right-16 top-5 bg-purple-600 sm:absolute z-10">
-
+      <div className="  h-2/4 rounded-2xl left-16 flex items-center
+       justify-center right-16 top-5  sm:absolute z-10 overflow-auto ">
+      {index>0 
+      &&<div className=" left-0 w-16 h-72 absolute flex items-center justify-center 
+       text-gray-900 cursor-pointer  bg-gradient-to-r from-black  to-transparent z-40"  onClick={prev}>
+       <FaChevronLeft size={30} id="prev_slider" className="rounded-full p-2  top-1/2 text-white hover:bg-gray-600"/>
+      </div> 
+      }
+      <div id="page" className=" scroll-bar flex overflow-x-scroll scroll-smooth">
+      {
+        images.map((image)=>(
+          <img src={image.img_name} key={image.id} className=" w-[300px] h-72 rounded m-1 bg-contain  " />
+        ))
+      }
+      </div>
+      { index<images.length-5  && 
+      <div className=" right-0 w-16 h-72 absolute flex items-center justify-center
+        text-gray-900 cursor-pointer  bg-gradient-to-l from-black  to-transparent hover:grad z-40"   onClick={next}>
+       <FaChevronRight size={30} id="next_slider" className="rounded-full p-2  top-1/2 text-white hover:bg-gray-600"/>
+      </div>}
       </div>
         <footer className="bg-black rounded-t-lg sm:h-4/6 sm:absolute bottom-0 inset-x-2 text-white text-center overflow-hidden">
         <img src="image/blackLogo.jpg" className="flex sm:hidden"/>

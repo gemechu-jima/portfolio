@@ -9,7 +9,6 @@ function PageNav({setDarkMode, darkMode}) {
      const {pathname}=useLocation()
      console.log(pathname)
      const navname=pathname.split('#')?.[1]
-     console.log(navname)
      const Linkess=(type)=>{
     let className=classNames("hover:border-solid hover:border-y-2 hover:border-sky-500  px-3 py-2 transition-all duration-300 rounded  hover:font-bold ")
      if(type===navname){
@@ -21,7 +20,7 @@ function PageNav({setDarkMode, darkMode}) {
    }
    
   return (
-    <nav className="flex items-center px-3 dark:bg-black fixed z-40 w-full bg-white">
+    <nav className="flex top-0 inset-x-0 items-center px-3 dark:bg-black fixed z-40  bg-white">
           <div className="flex-grow">
           <Logo darkMode={darkMode} />
           </div>

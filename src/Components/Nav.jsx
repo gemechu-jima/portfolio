@@ -4,12 +4,12 @@ import { NavLink } from "react-router-dom"
 function Nav({Linkess}) {
     
   return (
-    <ul className="list-none hidden md:flex justify-between  items-center gap-2 dark:text-white    ">
+    <ul className=" navbar list-none hidden md:flex justify-between scroll scroll-smooth items-center gap-2 dark:text-white    ">
     <li className={Linkess("")}> 
          <a href="#">Home</a>
     </li>
     <li className={Linkess("aboutme")}> 
-         <a href="#aboutme">About Me</a>
+         <a href="#aboutme" >About Me</a>
     </li>
     <li className={Linkess("service")}> 
          <a href="#service">Service</a>

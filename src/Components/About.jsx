@@ -19,7 +19,7 @@ function About(props) {
               </div>
               <div className="bg-slate-800  sm:w-40 sm:h-40 w-60 h-60 rounded-lg flex flex-col items-center justify-center sm:gap-4 gap-8 text-white">
                 <img src="icons/completed.png"/>
-                <p>Completed project<span>12 + completed</span></p>
+                <p>Completed project <span>12 + completed</span></p>
               </div>
               <div className="bg-slate-800  sm:w-40 sm:h-40 w-60 h-60 rounded-lg flex flex-col items-center justify-center sm:gap-4 gap-8 text-white">
                 <img src="icons/coming.png"/>

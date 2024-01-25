@@ -56,4 +56,16 @@
 .h-screen{
     height:calc(100vh )!important;
   }
+  .navbar.active{
+    background: blueviolet;
+    color: white;
+  }
+  .scroll-bar{
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scroll-bar::-webkit-scrollbar{
+    display: none;
+   }
 
+  

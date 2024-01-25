@@ -1,8 +1,8 @@
 import classNames from "classnames";
 function Portfolio() {
-    const className1=classNames(`flex flex-col items-center hover:opacity-100 opacity-0 hover:bg-slate-500
+    const className1=classNames(`flex flex-col items-center transition duration-1000 hover:opacity-100 opacity-0 hover:bg-slate-500
      justify-center absolute  inset-0 rounded-2xl text-center   box-border `);
-     const className2=classNames(`flex flex-col items-center hover:opacity-10 opacity-100 bg-slate-500 hover:bg-opacity-0
+     const className2=classNames(`flex flex-col items-center hover:opacity-10 transition duration-1000 opacity-100 bg-slate-500 hover:bg-opacity-0
      justify-center absolute  inset-0 rounded-2xl text-center  box-border  `);
   return ( 
     <section id="portfolio" className={`md:w-screen md:h-screen
