@@ -16,10 +16,17 @@ function LeftSideCta({darkMode}) {
         <div>
         <p><span className="text-blue-900">See About Me</span> </p>
         <div className="mt-2">
-            <Link to="https://github.com/gemechu-jima"> <img src="social media/facebook.png" className="w-8 h-8 inline mr-2 rounded-full"/></Link>
-             <img src="social media/linkedin.png" className="w-8 h-8 inline"/>
+            <Link to="https://www.facebook.com/gemechu.jima.75"> 
+            <img src="social media/facebook.png" className="w-8 h-8 inline mr-2 rounded-full"/></Link>
+            <Link to="https://www.linkedin.com/in/gemechu-jima-407880251">
+              <img src="social media/linkedin.png" className="w-8 h-8 inline"/>
+              </Link>
+            <Link to="https://twitter.com/@tasojima">
              <img src="social media/twitter.png" className="w-8 h-8 inline ml-2"/>
-             <img src="social media/github.png" className="w-8 h-8 inline ml-2"/>
+             </Link>
+            <Link to="https://github.com/gemechu-jima">
+              <img src="social media/github.png" className="w-8 h-8 inline ml-2"/>
+              </Link>
              </div>
         </div>
        <button className="bg-purple-500 text-white px-3 py-2 box-border rounded-full w-64" >

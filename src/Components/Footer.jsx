@@ -118,10 +118,17 @@ function footer() {
        <div className="sm:flex w-4/5 m-auto mt-5 justify-between">
          <p>CopyRight&copy; Gemechu {"    "}   {date.format("YYYY")} {"   "}<span> All Right is reserved</span></p>
          <div>
-          <img src="social media/facebook.png" className="w-10 h-10 inline mr-2"/>
-          <img src="social media/linkedin.png" className="w-10 h-10 inline"/>
-          <img src="social media/twitter.png" className="w-10 h-10 inline ml-2"/>
-          <img src="social media/github.png" className="w-10 h-10 inline ml-2"/>
+         <Link to="https://www.facebook.com/gemechu.jima.75"> 
+            <img src="social media/facebook.png" className="w-8 h-8 inline mr-2 rounded-full"/></Link>
+            <Link to="https://www.linkedin.com/in/gemechu-jima-407880251">
+              <img src="social media/linkedin.png" className="w-8 h-8 inline"/>
+              </Link>
+            <Link to="https://twitter.com/@tasojima">
+             <img src="social media/twitter.png" className="w-8 h-8 inline ml-2"/>
+             </Link>
+            <Link to="https://github.com/gemechu-jima">
+              <img src="social media/github.png" className="w-8 h-8 inline ml-2"/>
+              </Link>
          </div>
        </div>
         <div>
