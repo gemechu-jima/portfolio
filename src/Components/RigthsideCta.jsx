@@ -24,7 +24,8 @@ function RigthsideCta() {
              </p>
         </div>
              <div className="flex justify-between w-72 ">
-                <button className="bg-fuchsia-500 px-3 p-2 border rounded-full"><Link to="/files/Gemechu Jima CV.pdf" target="_blank" download> Download CV</Link> </button>
+                <button className="bg-fuchsia-500 px-3 p-2 border rounded-full">
+                    <Link to="/files/Gemechu Jima CV.pdf" target="_blank" download> Download CV</Link> </button>
                 <button className="bg-blue-600 text-fuchsia-500 border rounded-full border-fuchsia-800 px-10 py-2 ">Join</button>
              </div>
             

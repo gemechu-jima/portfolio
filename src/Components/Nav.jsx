@@ -1,28 +1,20 @@
 
 import { NavLink } from "react-router-dom"
-
-function Nav({Linkess}) {
-    
+import Links from "../Utils/links"
+function Nav({Linkess, handleActive, active}) {
+ 
   return (
-    <ul className=" navbar list-none hidden md:flex justify-between scroll scroll-smooth items-center gap-2 dark:text-white    ">
-    <li className={Linkess("")}> 
-         <a href="#">Home</a>
+    <ul className="list-none hidden md:flex justify-between 
+           items-center gap-2 dark:text-white">
+   {Links.map((link)=>(
+     <li className={Linkess} key={link.id}> 
+         <a href={"#"}
+         className={link.link===active? "text-blue-500 font-bold " :""}
+          onClick={(ev)=>handleActive(ev, link.link)}>
+          <span>{link.name}</span>
+          </a>
     </li>
-    <li className={Linkess("aboutme")}> 
-         <a href="#aboutme" >About Me</a>
-    </li>
-    <li className={Linkess("service")}> 
-         <a href="#service">Service</a>
-    </li>
-    <li className={Linkess("portfolio")}> 
-         <a href="#portfolio">Portfolio</a>
-  </li > 
-    <li className={Linkess("contactme")}> 
-         <a href="#contactme">Contact Me</a>
-     </li>
-    <li className={Linkess("skill")}> 
-         <a href="#skill">skill</a>
-     </li>
+   )) }
 </ul>
   )
 }

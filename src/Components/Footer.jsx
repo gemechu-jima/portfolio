@@ -124,7 +124,9 @@ function footer() {
           <img src="social media/github.png" className="w-10 h-10 inline ml-2"/>
          </div>
        </div>
-        
+        <div>
+          
+        </div>
         </footer>
     </section>
   )

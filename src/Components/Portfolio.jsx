@@ -1,8 +1,10 @@
 import classNames from "classnames";
 function Portfolio() {
-    const className1=classNames(`flex flex-col items-center transition duration-1000 hover:opacity-100 opacity-0 hover:bg-slate-500
+    const className1=classNames(`flex flex-col items-center transition duration-1000 
+       translate-y-[-100%] group-hover:translate-y-0 bg-gradient-to-b to-transparent from-black
      justify-center absolute  inset-0 rounded-2xl text-center   box-border `);
-     const className2=classNames(`flex flex-col items-center hover:opacity-10 transition duration-1000 opacity-100 bg-slate-500 hover:bg-opacity-0
+     const className2=classNames(`flex flex-col items-center hover:opacity-10 
+      transition duration-1000 opacity-100 bg-slate-500 hover:bg-opacity-0
      justify-center absolute  inset-0 rounded-2xl text-center  box-border  `);
   return ( 
     <section id="portfolio" className={`md:w-screen md:h-screen
@@ -25,7 +27,7 @@ function Portfolio() {
            </div>
           
         </div>
-        <div className="relative sm:w-full sm:h-full box-border">
+        <div className="relative sm:w-full sm:h-full box-border overflow-hidden group">
             <img src="image/Portfolio-Desk.jpg" className="opacity-100 hover:opacity-10 w-full h-full rounded-2xl duration-500 z-10 hover:-z-10 "/>
             <div className={className1}>
             <h1>December 19 16:00</h1>
