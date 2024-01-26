@@ -12,14 +12,16 @@ function About(props) {
           <div className="sm:w-4/6  w-full flex flex-col justify-center items-center sm:gap-10 gap-1 px-6 box-border">
               <h1 className="sm:text-3xl  font-serif text-center "> My Name is Gemechu Jima</h1>
               <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3  gap-5">
-              <div className="bg-slate-800  sm:w-40 sm:h-40 w-60 h-60 rounded-lg flex flex-col items-center justify-center sm:gap-4 gap-8 text-white">
+              <div className="bg-slate-800  sm:w-40 sm:h-40 w-60 h-60 rounded-lg flex flex-col
+               items-center justify-center sm:gap-4 gap-8 text-white">
                 <img src="icons/experience.png" />
                 <p>Experience <span>1 + years</span></p>
                
               </div>
-              <div className="bg-slate-800  sm:w-40 sm:h-40 w-60 h-60 rounded-lg flex flex-col items-center justify-center sm:gap-4 gap-8 text-white">
+              <div className="bg-slate-800  sm:w-40 sm:h-40 w-60 h-60 rounded-lg flex flex-col 
+              items-center justify-center sm:gap-4 gap-8 text-white">
                 <img src="icons/completed.png"/>
-                <p>Completed project <span>12 + completed</span></p>
+                <p c>Completed project <span>12 + <br/>completed</span></p>
               </div>
               <div className="bg-slate-800  sm:w-40 sm:h-40 w-60 h-60 rounded-lg flex flex-col items-center justify-center sm:gap-4 gap-8 text-white">
                 <img src="icons/coming.png"/>
@@ -29,7 +31,7 @@ function About(props) {
             <p className="xl:mx-28 flex items-center justify-center ">
             I am a software developer Who loves to creates Website
             
-             as well as web Design and qpp for people I think That people 
+             as well as web Design and app for people I think That people 
              should look at bigger picture when they creating something
             </p>
           
