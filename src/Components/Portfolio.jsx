@@ -33,7 +33,7 @@ function Portfolio() {
             <h1>December 19 16:00</h1>
             <p >Lorem ipsum dolor sit amet consectetur adipisicing elit.
             Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-            <button className="bg-purple-700 text-white  rounded-3xl sm:mt-10 px-4 py-2">Read More</button>
+            <button onClick="https://test-experience.netlify.app/" className="bg-purple-700 text-white  rounded-3xl sm:mt-10 px-4 py-2">Read More</button>
            </div>
            
         </div>
