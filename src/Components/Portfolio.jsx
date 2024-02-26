@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import classNames from "classnames";
 function Portfolio() {
     const className1=classNames(`flex flex-col items-center transition duration-1000 
@@ -33,7 +34,7 @@ function Portfolio() {
             <h1>December 19 16:00</h1>
             <p >Lorem ipsum dolor sit amet consectetur adipisicing elit.
             Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-            <button onClick="https://test-experience.netlify.app/" className="bg-purple-700 text-white  rounded-3xl sm:mt-10 px-4 py-2">Read More</button>
+            <Link onClick="https://test-experience.netlify.app/" className="bg-purple-700 text-white  rounded-3xl sm:mt-10 px-4 py-2">Read More</Link>
            </div>
            
         </div>
