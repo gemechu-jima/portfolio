@@ -32,13 +32,13 @@ function Contact() {
         <h1 className="">Please drop your Email and phone number</h1>
         </div>
         <form ref={form}  className="sm:w-2/4 sm:m-auto sm:mt-10 mt-5 mx-2 grid sm:grid-cols-2 gap-4 " onSubmit={handleSubmit}>
-          <input placeholder="enter yoou first name " 
+          <input placeholder="enter you first name " 
            className={classnames}
           />
-          <input placeholder="enter yoou Last Name "
+          <input placeholder="enter you Last Name "
            className={classnames}
           />
-          <input placeholder="enter yoou Email "
+          <input placeholder="enter you Email "
            className={classnames}
           />
           <input placeholder="enter yoou Phone Number "

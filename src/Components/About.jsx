@@ -21,16 +21,16 @@ function About(props) {
               <div className="bg-slate-800  sm:w-40 sm:h-40 w-60 h-60 rounded-lg flex flex-col 
               items-center justify-center sm:gap-4 gap-8 text-white">
                 <img src="icons/completed.png"/>
-                <p c>Completed project <span>12 + <br/>completed</span></p>
+                <p>Completed project <span>12 + <br/>completed</span></p>
               </div>
-              <div className="bg-slate-800  sm:w-40 sm:h-40 w-60 h-60 rounded-lg flex flex-col items-center justify-center sm:gap-4 gap-8 text-white">
+              <div className="bg-slate-800  sm:w-40 sm:h-40 w-60
+               h-60 rounded-lg flex flex-col items-center justify-center sm:gap-4 gap-8 text-white">
                 <img src="icons/coming.png"/>
                 <p>coming soon  <span>...</span></p>
               </div>
             </div>
             <p className="xl:mx-28 flex items-center justify-center ">
             I am a software developer Who loves to creates Website
-            
              as well as web Design and app for people I think That people 
              should look at bigger picture when they creating something
             </p>
