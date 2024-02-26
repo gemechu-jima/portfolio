@@ -29,7 +29,7 @@ function Portfolio() {
           
         </div>
         <div className="relative sm:w-full sm:h-full box-border overflow-hidden group">
-            <img src="image/Portfolio-Desk.jpg" className="opacity-100 hover:opacity-10 w-full h-full rounded-2xl duration-500 z-10 hover:-z-10 "/>
+            <img src="image/test.jpg" className="opacity-100 hover:opacity-10 w-full h-full rounded-2xl duration-500 z-10 hover:-z-10 "/>
             <div className={className1}>
             <h1>December 19 16:00</h1>
             <p >Lorem ipsum dolor sit amet consectetur adipisicing elit.
