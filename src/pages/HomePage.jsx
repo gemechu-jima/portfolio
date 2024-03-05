@@ -37,14 +37,6 @@ function HomePage() {
        bg-slate-200 font-serif dark:bg-black dark:text-white
         md:h-screen md:flex-row md:justify-between ">
         <Helmet>
-        <title>Gemechu Jima Protfolio</title>
-        <meta name="description" content="Your page description" />
-        {/* Open Graph meta tags for better sharing on social media */}
-        <meta property="og:title" content="portfolio" />
-        <meta property="og:description" content="Your page description portfolio" />
-        <meta property="og:image" content="image/Portfolio-Desk.jpg" />
-        <meta property="og:url" content="https://gemechu.netlify.app/" />
-        <meta property="og:type" content="website" />
         </Helmet>
         <RigthsideCta />
         <LeftSideCta darkMode={darkMode} />

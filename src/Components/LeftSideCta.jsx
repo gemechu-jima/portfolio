@@ -16,7 +16,7 @@ function LeftSideCta({darkMode}) {
         <div>
         <p><span className="text-blue-900">See About Me</span> </p>
         <div className="mt-2">
-            <Link to="https://www.facebook.com/gemechu.jima.75"> 
+            <Link to="http://localhost:5173/#"> 
             <img src="social media/facebook.png" className="w-8 h-8 inline mr-2 rounded-full"/></Link>
             <Link to="https://www.linkedin.com/in/gemechu-jima-407880251">
               <img src="social media/linkedin.png" className="w-8 h-8 inline"/>
