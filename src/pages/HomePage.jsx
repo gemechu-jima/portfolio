@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Helmet } from "react-helmet";
 import LeftSideCta from "../Components/LeftSideCta";
 import PageNav from "../Components/PageNav";
 import RigthsideCta from "../Components/RigthsideCta";
@@ -9,6 +10,7 @@ import Portfolio from "../Components/Portfolio.jsx";
 import Contact from "../Components/Contact.jsx";
 import Footer from "../Components/Footer.jsx";
 import Backdrop from "../Components/Backdrop.jsx";
+
 
 function HomePage() {
   const [darkMode, setDarkMode] = useState(false);
@@ -31,7 +33,19 @@ function HomePage() {
         openSideBar={openSideBar}
         setOpenSideBar={setOpenSideBar}
       />
-      <div className="relative mx-auto  flex w-full flex-col bg-slate-200 font-serif dark:bg-black dark:text-white md:h-screen md:flex-row md:justify-between ">
+      <div className="relative mx-auto  flex w-full flex-col
+       bg-slate-200 font-serif dark:bg-black dark:text-white
+        md:h-screen md:flex-row md:justify-between ">
+        <Helmet>
+        <title>Gemechu Jima Protfolio</title>
+        <meta name="description" content="Your page description" />
+        {/* Open Graph meta tags for better sharing on social media */}
+        <meta property="og:title" content="portfolio" />
+        <meta property="og:description" content="Your page description portfolio" />
+        <meta property="og:image" content="image/Portfolio-Desk.jpg" />
+        <meta property="og:url" content="https://gemechu.netlify.app/" />
+        <meta property="og:type" content="website" />
+        </Helmet>
         <RigthsideCta />
         <LeftSideCta darkMode={darkMode} />
       </div>
