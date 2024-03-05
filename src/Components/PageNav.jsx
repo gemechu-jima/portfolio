@@ -10,6 +10,7 @@ function PageNav({ setDarkMode, darkMode,  openSideBar, setOpenSideBar}) {
   const [active, setActive] = useState(null);
 
   const handleActive = (ev, link) => {
+    ev.preventDefault();
     ev.stopPropagation();
     setActive(link);
     const elementToView = document.getElementById(link);

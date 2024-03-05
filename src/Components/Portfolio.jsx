@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import classNames from "classnames";
 function Portfolio() {
-    const className1=classNames(`flex flex-col items-center transition duration-1000 
+    const  className1=classNames(`flex flex-col items-center transition duration-1000 
        translate-y-[-100%] group-hover:translate-y-0 bg-gradient-to-b to-transparent from-black
      justify-center absolute  inset-0 rounded-2xl text-center   box-border `);
      const className2=classNames(`flex flex-col items-center hover:opacity-10 
