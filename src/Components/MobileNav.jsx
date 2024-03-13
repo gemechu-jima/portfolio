@@ -27,7 +27,7 @@ function MobileNav({Linkess, darkMode, openSideBar, setOpenSideBar}) {
               <h1><img src="image/gj.jpg" className="rounded-full w-10 h-10 inline pr-1"/>Gemechu </h1>
               <ImCross className="absolute top-4 right-3 text-red-600" onClick={handleClick}/>
               <li className={Linkess} onClick={handleClick}> 
-              <a href="#">Home</a>
+              <a href="#home">Home</a>
               </li>
               <li className={Linkess +"aboutme"} onClick={handleClick}> 
                   <a href="#aboutme">About Me</a>

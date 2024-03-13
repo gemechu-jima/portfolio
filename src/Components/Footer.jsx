@@ -102,8 +102,8 @@ function footer() {
           </div>
          <div className="flex flex-col gap-4">
          <h1 className="font-extrabold">Contact</h1>
-         <p className="font-thin">+251 (9) 30851744</p>
-          <p className="font-thin">gemechujimacs@gmail.com</p>
+         <a className="font-thin" href="tell:+251930851744">+251 (9) 30851744</a>
+          <a className="font-thin" href="mailto:gemechujimacs@gmail.com">gemechujimacs@gmail.com</a>
          
          </div>
           <div className="flex flex-col gap-4">
