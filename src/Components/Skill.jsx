@@ -21,7 +21,7 @@ function Skill() {
       <img src="icons/JavaScript.png" className="inline "/> <span>Javascript</span>
       </div>
       <div className="flex justify-between items-center w-1/3 gap-3">
-      <img src="icons/React.png" className="inline  "/><span>RaectJS</span>
+      <img src="icons/React.png" className="inline  "/><span>ReactJS</span>
       </div>
       <div className="flex justify-between items-center w-1/3 gap-3">
       <img src="icons/Bootstrap.png" className="inline  "/> <span>Bootstrap</span>
