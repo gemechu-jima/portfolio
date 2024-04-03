@@ -1,4 +1,3 @@
-import { useLocation } from "react-router-dom";
 // import PropTypes from 'prop-types';
 import classNames from "classnames";
 import Logo from "./Logo";
@@ -24,7 +23,8 @@ const handleScroll=()=>{
   const element = document.getElementById(section);
   if (element) {
     const { top, bottom } = element.getBoundingClientRect();
-    if (top <= 0 && bottom >= 0) {
+    console.log(top, bottom)
+    if (top === -649 && bottom >= 0) {
       setActive(section);
       break;
     }

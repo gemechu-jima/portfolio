@@ -17,13 +17,13 @@ function Portfolio() {
      </div>   
 
       <div className=" grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3  mx-10 m-auto gap-4">
-      <div className="relative sm:w-full sm:h-full box-border">
-      <img src="image/dev.jpg" alt="developer" className=" w-full h-full rounded-2xl duration-500 z-10 hover:-z-10 "/>
-           <div className={className2}>
-            <h1>December 19 16:00</h1>
+      <div className="relative sm:w-full sm:h-full box-border overflow-hidden group">
+      <img src="image/blogpodcast.jpg" alt="developer" className=" w-full h-full rounded-2xl duration-500 z-10 hover:-z-10 "/>
+           <div className={className1}>
+            <h1>April 3 2024 19 16:00</h1>
             <p >Lorem ipsum dolor sit amet consectetur adipisicing elit.
             Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-            <button className="bg-purple-700 text-white  rounded-3xl sm:mt-10 px-4 py-2">Read More</button>
+            <Link to="https://blogpodcast.vercel.app" className="bg-purple-700 text-white  rounded-3xl sm:mt-10 px-4 py-2">Read More</Link>
         
            </div>
           
