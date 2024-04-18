@@ -34,7 +34,7 @@ function HomePage() {
         setOpenSideBar={setOpenSideBar}
       />
       <div id="home" className="relative mx-auto  flex w-full flex-col
-       bg-slate-200 font-serif dark:bg-black dark:text-white
+       bg-slate-200 font-serif dark:bg-black dark:text-white 
         md:h-screen md:flex-row md:justify-between ">
         <Helmet>
         </Helmet>

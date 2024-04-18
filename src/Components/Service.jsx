@@ -2,7 +2,7 @@
 import {FaArrowRight} from "react-icons/fa"
 function Service() {
   return (
-    <section id="service" className="md:w-screen md:h-screen bg-slate-800 text-white text-center flex flex-col ">
+    <section id="service" className="md:w-screen md:h-screen bg-slate-800 text-white text-center flex flex-col  bg-[url('/image/bg.jpg')] bg-fixed ">
       <h1 className="text-5xl mt-16"> My Service</h1>
       <div className="grid sm:grid-cols-2 md:grid-cols-3 grid-cols-1 w-[94%] md:mt-[5rem] mx-auto gap-y-2 gap-10 mb-3  ">
           <div className="relative h-72 sm:h-full xl:h-[25rem] py-2 flex items-center justify-center rounded-3xl bg-green-300 bg-cover overflow-hidden hover:scale-110 hover:-rotate-3 ">
