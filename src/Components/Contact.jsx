@@ -41,10 +41,10 @@ function Contact() {
           <input placeholder="enter you Email "
            className={classnames}
           />
-          <input placeholder="enter yoou Phone Number "
+          <input placeholder="enter you Phone Number "
            className={classnames}
           />
-            <input placeholder="enter yoou Website"
+            <input placeholder="enter you Website"
            className={`${classnames} sm:col-span-2`}
            />
           <textarea rows={5} cols={5}  className={`${classnames} sm:col-span-2`} placeholder="Write what can I do for you">
