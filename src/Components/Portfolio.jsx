@@ -23,7 +23,7 @@ function Portfolio() {
             <h1>April 3 2024 19 16:00</h1>
             <p >Lorem ipsum dolor sit amet consectetur adipisicing elit.
             Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-            <Link to="https://blogpodcast.vercel.app" className="bg-purple-700 text-white  rounded-3xl sm:mt-10 px-4 py-2">Read More</Link>
+            <Link to="https://blogpodcast.vercel.app" className="bg-purple-700 text-white  rounded-3xl sm:mt-10 px-4 py-2">see More</Link>
         
            </div>
           
@@ -34,17 +34,18 @@ function Portfolio() {
             <h1>December 19 16:00</h1>
             <p >Lorem ipsum dolor sit amet consectetur adipisicing elit.
             Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-            <Link to="https://test-experience.netlify.app/" className="bg-purple-700 text-white  rounded-3xl sm:mt-10 px-4 py-2">Read More</Link>
+            <Link to="https://test-experience.netlify.app/" className="bg-purple-700 text-white  rounded-3xl sm:mt-10 px-4 py-2">see More</Link>
            </div>
            
         </div>
-        <div className="relative sm:w-full sm:h-full box-border">
-            <img src="image/devbg.jpg" className=" w-full h-full rounded-2xl duration-500  hover:z-20 "/>
-            <div className={className2}>
-            <h1>December 19 16:00</h1>
-            <p >Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-            <button className="bg-purple-700 text-white  rounded-3xl sm:mt-10 px-4 py-2">Read More</button>
+        <div className="relative sm:w-full sm:h-full box-border overflow-hidden group">
+            <img src="image/e-commerce.png" className="opacity-100 hover:opacity-10 w-full h-full rounded-2xl duration-500 z-10 hover:-z-10 "/>
+            <div className={className1}>
+              <h1> may 1, 2024</h1>
+            <h1>E-commerce web site</h1>
+            <p >You can check every function with login demo account from .
+            get the account customer service link if you are question inbox it .</p>
+            <Link to="https://mern-ecommerce12.netlify.app/" className="bg-purple-700 text-white  rounded-3xl sm:mt-10 px-4 py-2">See more</Link>
            </div>
         </div>
      
