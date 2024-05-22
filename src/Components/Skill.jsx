@@ -42,7 +42,7 @@ function Skill() {
       <img src="icons/PostgreSQl.png" className="inline  pr-5"/> <span>PostgreSQL</span>
       </div>
       <div>
-      <img src="icons/mongodb.png" alt="MDB" className="inline  pr-5"/><span>MongoDB</span>
+      <img src="icons/mongodb.png" alt="MDB" className="inline w-16 pr-5"/><span>MongoDB</span>
       </div>
       <div>
       <img src="icons/nodejs.png" className="inline  pr-5"/><span>NodeJS</span>
