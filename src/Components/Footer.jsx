@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom"
 import {FaChevronLeft,FaChevronRight} from "react-icons/fa"
 import DateObject from "react-date-object"
-import { useState } from "react"
+import { useState, useRef, useEffect } from "react"
 
 const date=new DateObject()
 const images=[
@@ -42,13 +42,23 @@ const images=[
 function footer() {
   const [index, setIndex]=useState(0)
   const [scroll, setScroll]=useState(0)
+  const [maxScroll, setMaxScroll]=useState()
+  const divRef=useRef()
   window.addEventListener("scroll", ()=>{
     const scrolable=document.getElementById("page").scrollWidth-window.innerWidth
     const scrolled=window.scrollX
     setScroll(scrolled)
     
   })
- 
+   useEffect(()=>{
+    const handleMaxScroll=()=>{
+      const differentMaxScroll=divRef.current.scrollWidth-divRef.current.clientWidth;
+      console.log(differentMaxScroll)
+    }
+    setScroll(divRef.current.scrollLeft)
+     
+    handleMaxScroll()
+   },[])
   const prev=()=>{
     setIndex(index-1)
     const page=document.getElementById("page")
@@ -71,10 +81,10 @@ function footer() {
        <FaChevronLeft size={30} id="prev_slider" className="rounded-full p-2  top-1/2 text-white hover:bg-gray-600"/>
       </div> 
       }
-      <div id="page" className=" scroll-bar flex overflow-x-scroll scroll-smooth">
+      <div id="page" ref={divRef} className=" scroll-bar flex overflow-x-scroll scroll-smooth">
       {
         images.map((image)=>(
-          <img src={image.img_name} key={image.id} className=" w-[300px] h-72 rounded m-1 bg-contain  " />
+          <img src={image.img_name} key={image.id} className="select-none w-[300px] h-72 rounded m-1 bg-contain  " />
         ))
       }
       </div>
