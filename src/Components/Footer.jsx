@@ -44,39 +44,46 @@ function footer() {
   const [scroll, setScroll]=useState(0)
   const [maxScroll, setMaxScroll]=useState()
   const divRef=useRef()
-  window.addEventListener("scroll", ()=>{
-    const scrolable=document.getElementById("page").scrollWidth-window.innerWidth
-    const scrolled=window.scrollX
-    setScroll(scrolled)
+  // window.addEventListener("scroll", ()=>{
+  //   const scrolable=document.getElementById("page").scrollWidth-window.innerWidth
+  //   const scrolled=window.scrollX
+  //   setScroll(scrolled)
     
-  })
-   useEffect(()=>{
-    const handleMaxScroll=()=>{
-      const differentMaxScroll=divRef.current.scrollWidth-divRef.current.clientWidth;
-      console.log(differentMaxScroll)
-    }
+  // })
+  const handleScroll=()=>{
+    
     setScroll(divRef.current.scrollLeft)
-     
-    handleMaxScroll()
-   },[])
+  }
+  const handleMaxScroll=()=>{
+    const differentMaxScroll=divRef.current.scrollWidth-divRef.current.clientWidth;
+    setMaxScroll(differentMaxScroll)
+    console.log("maxScroll",differentMaxScroll)
+  }
   const prev=()=>{
-    setIndex(index-1)
-    const page=document.getElementById("page")
-    console.log(page?.scrollLeft)
-    page.scrollLeft=page.scrollLeft+500
+    divRef.current.scrollLeft -=300
+    handleScroll()
+
   }
   const next=()=>{
-    setIndex(index+1)
-    const page=document.getElementById("page")
-    console.log(page?.scrollLeft)
-    page.scrollLeft=page.scrollLeft-500 
+    divRef.current.scrollLeft +=300
+    handleScroll()
+
   }
+  useEffect(()=>{
+    divRef.current.addEventListener("scroll", () => {
+      handleScroll();
+      updateMaxScroll();
+    });
+    handleScroll()
+     console.log("scroll", scroll)
+    handleMaxScroll()
+   },)
   return (
     <section className="w-screen h-screen bg-slate-500 relative" >
       <div className="  h-2/4 rounded-2xl left-16 flex items-center
        justify-center right-16 top-5  sm:absolute z-10 overflow-auto ">
-      {index>0 
-      &&<div className=" left-0 w-16 h-72 absolute flex items-center justify-center 
+      {scroll>0 
+      &&<div className=" left-0 w-16 h-40 absolute flex items-center justify-center 
        text-gray-900 cursor-pointer  bg-gradient-to-r from-black  to-transparent z-40"  onClick={prev}>
        <FaChevronLeft size={30} id="prev_slider" className="rounded-full p-2  top-1/2 text-white hover:bg-gray-600"/>
       </div> 
@@ -84,12 +91,12 @@ function footer() {
       <div id="page" ref={divRef} className=" scroll-bar flex overflow-x-scroll scroll-smooth">
       {
         images.map((image)=>(
-          <img src={image.img_name} key={image.id} className="select-none w-[300px] h-72 rounded m-1 bg-contain  " />
+          <img src={image.img_name} key={image.id} className="select-none w-[200px] h-40 rounded m-1 bg-contain  " />
         ))
       }
       </div>
-      { index<images.length-5  && 
-      <div className=" right-0 w-16 h-72 absolute flex items-center justify-center
+      { scroll < maxScroll && 
+      <div className=" right-0 w-16 h-40 absolute flex items-center justify-center
         text-gray-900 cursor-pointer  bg-gradient-to-l from-black  to-transparent hover:grad z-40"   onClick={next}>
        <FaChevronRight size={30} id="next_slider" className="rounded-full p-2  top-1/2 text-white hover:bg-gray-600"/>
       </div>}
