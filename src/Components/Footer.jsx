@@ -68,8 +68,7 @@ function footer() {
     });
     handleScroll();
   }, [scroll]);
-  console.log("maxScroll", maxScroll);
-  console.log("Scroll", scroll);
+ 
 
   return (
     <section className="relative h-screen w-screen bg-slate-500">

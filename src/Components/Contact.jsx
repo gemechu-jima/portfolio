@@ -9,7 +9,9 @@ const [data, setData]=useState({
   phone:"",
   message:""
 })
-const handleChange=(ev)=>{
+const [error, setError]=useState('')
+
+const handleChange=(ev)=>{  
   const {name, value}=ev.target;
   setData((prevData)=>({
     ...prevData,
@@ -18,11 +20,25 @@ const handleChange=(ev)=>{
 }
  const handleSubmit=async(ev)=>{
   ev.preventDefault()
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const PhoneRegex = /^(9\d{8}|09\d{8}|251\d{9})$/;
+ 
+  
+    if (!emailRegex.test(data.email)) {
+      setError('Invalid email format');
+     return toast.error(error)
+    } 
+  
+    if(!PhoneRegex.test(data.phone)){
+      setError("Invalid phone number ")
+      return toast.error(error)
+    }
+ 
   const response = await axios.post("https://portfolio-fevu.onrender.com/api/contact", data);
    console.log(response)
   if (!response.status===200) {
     toast.error(response.data)
-    throw new Error(`Network response was not ok: ${response.statusText}`);
+    throw new Error(`Network response was not ok: ${response.data}`);
    
   }
   toast.success(response.data)
@@ -40,6 +56,7 @@ const handleChange=(ev)=>{
           <input placeholder="Enter Your Full name" 
            className={`${classnames} sm:col-span-2`}
            name="name"
+           minLength={"5"}
            value={data.name} onChange={handleChange}
            required
           />
@@ -52,6 +69,7 @@ const handleChange=(ev)=>{
           <input placeholder="enter you Phone Number "
            className={classnames}
            name="phone"
+           min={10}
            value={data.phone} onChange={handleChange}
            required
           />
