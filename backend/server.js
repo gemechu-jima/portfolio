@@ -11,6 +11,9 @@ const app = express();
 app.use(express.json());
 app.use(cors())
 const ke="aeqa ismc yrtm pvij"
+app.get("/", (req, res)=>{
+  res.json({message:"Server is running"})
+})
 app.post("/api/contact", async (req, res) => {
   const { name, email, phone, message } = req.body;
   const transporter = nodemailer.createTransport({
