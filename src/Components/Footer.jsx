@@ -95,16 +95,16 @@ function footer() {
           ref={divRef}
           className=" scroll-bar flex overflow-x-scroll scroll-smooth"
         >
-          {images.map((image) => (
+          {/* {images.map((image) => (
 
             <img
               src={image.img_name}
               key={image.id}
               className="m-1 h-40 w-[200px] select-none rounded bg-contain  "
             />
-          ))}
+          ))} */}
         </div>
-        {scroll < maxScroll && (
+        {/* {scroll < maxScroll && (
           <div
             className=" hover:grad absolute right-0 z-40 flex h-40 w-16
         cursor-pointer items-center  justify-center bg-gradient-to-l  from-black to-transparent text-gray-900"
@@ -116,19 +116,10 @@ function footer() {
               className="top-1/2 rounded-full  p-2 text-white hover:bg-gray-600"
             />
           </div>
-        )}
+        )} */}
       </div>
       <footer className="relative inset-x-2 bottom-0 overflow-hidden rounded-t-lg bg-black text-center text-white sm:absolute sm:h-4/6">
-        <div className="relative w-20 mx-auto top-24 flex justify-center items-center gap-1 cursor-pointer">
-          {images.map((image, index) => (
-            <button
-              key={index}
-              className=" cursor-pointer h-4 w-4 rounded-full bg-white p-2"
-            >
-            </button>
-          ))}
-        </div>
-
+      
         <img src="image/blackLogo.jpg" className="flex sm:hidden" />
         <div className=" flex  flex-row items-center text-white sm:m-auto sm:mt-44  sm:w-4/6 sm:justify-between sm:gap-5 ">
           <img src="image/blackLogo.jpg" className="hidden sm:flex" />
