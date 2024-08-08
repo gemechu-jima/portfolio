@@ -18,7 +18,7 @@ const handleChange=(ev)=>{
 }
  const handleSubmit=async(ev)=>{
   ev.preventDefault()
-  const response = await axios.post("/api/contact", data);
+  const response = await axios.post("https://portfolio-fevu.onrender.com/api/contact", data);
    console.log(response)
   if (!response.status===200) {
     toast.error(response.data)
