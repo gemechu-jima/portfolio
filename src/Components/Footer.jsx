@@ -1,8 +1,10 @@
 import { Link } from "react-router-dom";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import DateObject from "react-date-object";
-import { useState, useRef, useEffect } from "react";
-
+import classNames from "classnames"
+import axios from "axios"
+import { useRef, useState, useEffect } from "react";
+import { toast } from "react-toastify";
 const date = new DateObject();
 const images = [
   {
@@ -40,83 +42,85 @@ const images = [
 ];
 
 function footer() {
-  const [indexImage, setIndexImage] = useState(0);
-  const [scroll, setScroll] = useState(0);
-  const [maxScroll, setMaxScroll] = useState(1);
-  const divRef = useRef();
-
-  const handleScroll = () => {
-    setScroll(divRef.current.scrollLeft);
-  };
-  const handleMaxScroll = () => {
-    const differentMaxScroll =
-      divRef.current.scrollWidth - divRef.current.clientWidth;
-    setMaxScroll(differentMaxScroll - 1);
-  };
-  const prev = () => {
-    divRef.current.scrollLeft -= 300;
-    handleScroll();
-  };
-  const next = () => {
-    divRef.current.scrollLeft += 300;
-    handleScroll();
-  };
-  useEffect(() => {
-    divRef.current.addEventListener("scroll", () => {
-      handleScroll();
-      handleMaxScroll();
-    });
-    handleScroll();
-  }, [scroll]);
- 
+  const [data, setData]=useState({
+    name:"",
+    email:"",
+    phone:"",
+    message:""
+  })
+  const [error, setError]=useState('')
+  
+  const handleChange=(ev)=>{  
+    const {name, value}=ev.target;
+    setData((prevData)=>({
+      ...prevData,
+      [name]:value
+    }))
+  }
+   const handleSubmit=async(ev)=>{
+    ev.preventDefault()
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const PhoneRegex = /^(9\d{8}|09\d{8}|251\d{9})$/;
+   
+    
+      if (!emailRegex.test(data.email)) {
+        setError('Invalid email format');
+       return toast.error(error)
+      } 
+    
+      if(!PhoneRegex.test(data.phone)){
+        setError("Invalid phone number ")
+        return toast.error(error)
+      }
+   
+    const response = await axios.post("https://portfolio-fevu.onrender.com/api/contact", data);
+     console.log(response)
+    if (!response.status===200) {
+      toast.error(response.data)
+      throw new Error(`Network response was not ok: ${response.data}`);
+     
+    }
+    toast.success(response.data)
+    console.log("data", response.data)
+   }
+  
+   const classnames=classNames("p-2 rounded-2xl border-collapse  border-solid border-2 border-indigo-500 focus:outline-none focus:ring focus:ring-indigo-500 ")
 
   return (
     <section className="relative h-screen w-screen bg-slate-500">
-      <div
-        className="  left-16 right-16 top-5 z-10 flex
-       h-2/4 items-center justify-center  overflow-auto rounded-2xl sm:absolute "
-      >
-        {scroll > 0 && (
-          <div
-            className=" absolute left-0 z-40 flex h-40 w-16 cursor-pointer 
-       items-center justify-center  bg-gradient-to-r from-black  to-transparent text-gray-900"
-            onClick={prev}
-          >
-            <FaChevronLeft
-              size={30}
-              id="prev_slider"
-              className="top-1/2 rounded-full  p-2 text-white hover:bg-gray-600"
-            />
+      <form  className="relative sm:w-2/4 sm:m-auto m-10 rounded-md sm:mt-10 mt-5 mx-2 grid sm:grid-cols-2 gap-2  z-50 bg-slate-50 p-4 " onSubmit={handleSubmit}>
+          <input placeholder="Enter Your Full name" 
+           className={`${classnames} sm:col-span-2`}
+           name="name"
+           minLength={"5"}
+           value={data.name} onChange={handleChange}
+           required
+          />
+          <input placeholder="enter you Email "
+           className={classnames} 
+           name="email"
+           value={data.email} onChange={handleChange}
+           required
+          />
+          <input placeholder="enter you Phone Number "
+           className={classnames}
+           name="phone"
+           min={10}
+           value={data.phone} onChange={handleChange}
+           required
+          />
+          <textarea rows={5} cols={5} 
+           className={`${classnames} sm:col-span-2`}
+           name="message"
+           value={data.message} onChange={handleChange} 
+           placeholder="Write what can I do for you">
+          </textarea>
+          <div className={`${classnames} sm:col-span-2 flex items-center justify-center sm:gap-3 gap-1 focus:ring-indigo-00 border-none`}> 
+          <button type ="reset" className="bg-indigo-500 py-2 rounded-2xl w-32 sm:w-1/4 m-auto mt-5">Cancel</button> 
+          <button type="submit" className="bg-purple-500 rounded-2xl py-2 w-32 sm:w-1/4 m-auto mt-5">Submit Message</button>
           </div>
-        )}
-        <div
-          id="page"
-          ref={divRef}
-          className=" scroll-bar flex overflow-x-scroll scroll-smooth"
-        >
-          {/* {images.map((image) => (
-
-            <img
-              src={image.img_name}
-              key={image.id}
-              className="m-1 h-40 w-[200px] select-none rounded bg-contain  "
-            />
-          ))} */}
-        </div>
-        {/* {scroll < maxScroll && (
-          <div
-            className=" hover:grad absolute right-0 z-40 flex h-40 w-16
-        cursor-pointer items-center  justify-center bg-gradient-to-l  from-black to-transparent text-gray-900"
-            onClick={next}
-          >
-            <FaChevronRight
-              size={30}
-              id="next_slider"
-              className="top-1/2 rounded-full  p-2 text-white hover:bg-gray-600"
-            />
-          </div>
-        )} */}
-      </div>
+          
+        </form>
       <footer className="relative inset-x-2 bottom-0 overflow-hidden rounded-t-lg bg-black text-center text-white sm:absolute sm:h-4/6">
       
         <img src="image/blackLogo.jpg" className="flex sm:hidden" />

@@ -1,90 +1,97 @@
-import classNames from "classnames"
-import axios from "axios"
-import { useRef, useState, useEffect } from "react";
-import { toast } from "react-toastify";
-function Contact() {
-const [data, setData]=useState({
-  name:"",
-  email:"",
-  phone:"",
-  message:""
-})
-const [error, setError]=useState('')
 
-const handleChange=(ev)=>{  
-  const {name, value}=ev.target;
-  setData((prevData)=>({
-    ...prevData,
-    [name]:value
-  }))
-}
- const handleSubmit=async(ev)=>{
-  ev.preventDefault()
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  const PhoneRegex = /^(9\d{8}|09\d{8}|251\d{9})$/;
- 
-  
-    if (!emailRegex.test(data.email)) {
-      setError('Invalid email format');
-     return toast.error(error)
-    } 
-  
-    if(!PhoneRegex.test(data.phone)){
-      setError("Invalid phone number ")
-      return toast.error(error)
-    }
- 
-  const response = await axios.post("https://portfolio-fevu.onrender.com/api/contact", data);
-   console.log(response)
-  if (!response.status===200) {
-    toast.error(response.data)
-    throw new Error(`Network response was not ok: ${response.data}`);
-   
-  }
-  toast.success(response.data)
-  console.log("data", response.data)
- }
- const classnames=classNames("p-2 rounded-2xl border-collapse  border-solid border-2 border-indigo-500 focus:outline-none focus:ring focus:ring-indigo-500 ")
+import { CiMobile1 } from "react-icons/ci";
+import { MdEmail } from "react-icons/md";
+import { BsLinkedin } from "react-icons/bs";
+import { AiFillGithub } from "react-icons/ai";
+import { FaFacebook } from "react-icons/fa";
+import { AiOutlineWhatsApp } from "react-icons/ai";
+import { AiOutlineInstagram } from "react-icons/ai";
+import { FaTelegram ,FaMobile, FaLinkedin,FaGithub } from "react-icons/fa";
+import { TbWorld } from "react-icons/tb";
+
+function Contact() {
+
   return (
     <section id="contactme" className="text-center md:w-screen md:h-screen">
-        <div className="bg-gradient-to-b md:font-extrabold md:text-6xl sm:text-3xl text-xl
-          from-indigo-900 from-70%
-         via-indigo-700 to-indigo-100 to-10% pb-20 py-10 m-auto text-white">
-        <h1 className="">Please drop your Email and phone number</h1>
+        <div>
+          <h1 className="text-4xl font-bold text-indigo-500">Contact Me</h1>
+          <p className="text-gray-500 mt-2">I am always open to discuss your project, 
+            improve your online presence or help with your Web development challenges.</p>
+          <p className="text-gray-500 mt-2">You can also reach me through my social media accounts.</p>
         </div>
-        <form  className="sm:w-2/4 sm:m-auto sm:mt-10 mt-5 mx-2 grid sm:grid-cols-2 gap-4 " onSubmit={handleSubmit}>
-          <input placeholder="Enter Your Full name" 
-           className={`${classnames} sm:col-span-2`}
-           name="name"
-           minLength={"5"}
-           value={data.name} onChange={handleChange}
-           required
-          />
-          <input placeholder="enter you Email "
-           className={classnames} 
-           name="email"
-           value={data.email} onChange={handleChange}
-           required
-          />
-          <input placeholder="enter you Phone Number "
-           className={classnames}
-           name="phone"
-           min={10}
-           value={data.phone} onChange={handleChange}
-           required
-          />
-          <textarea rows={5} cols={5} 
-           className={`${classnames} sm:col-span-2`}
-           name="message"
-           value={data.message} onChange={handleChange} 
-           placeholder="Write what can I do for you">
-          </textarea>
-          <div className={`${classnames} sm:col-span-2 flex items-center justify-center sm:gap-3 gap-1 focus:ring-indigo-00 border-none`}> 
-          <button type ="reset" className="bg-indigo-500 py-2 rounded-2xl w-32 sm:w-1/4 m-auto mt-5">Cancel</button> 
-          <button type="submit" className="bg-purple-500 rounded-2xl py-2 w-32 sm:w-1/4 m-auto mt-5">Submit Message</button>
+        <div className="flex items-center md:flex-row flex-col  md:justify-center mt-10 h-96 gap-4">
+         <div className="w-2/4 h-full   ">
+          <div className="flex flex-col gap-2 border-b-2 border-gray-300 pb-4">
+          <p className="flex items-center ml-5 gap-2">
+            <CiMobile1 size={20} className="text-blue-500" /> 
+            <span className="text-gray-500">+251930851744 / +251712313085</span>
+          </p>
+          <p className="flex items-center ml-5 gap-2">
+            <MdEmail size={20} className="text-blue-500" /> 
+            <span className="text-gray-500">gemechujimacs@gmail.com</span>
+          </p>
+          <p className="flex items-center ml-5 gap-2">
+            <FaGithub size={20} className="text-blue-500" /> 
+            <span className="text-gray-500">https://github.com/gemechu-jima</span>
+          </p>
+          <p className="flex items-center ml-5 gap-2">
+            <BsLinkedin size={20} className="text-blue-500" /> 
+            <span className="text-gray-500">https://www.linkedin.com/in/gemechu-jima-407880251</span>
+            </p>
+            <p className="flex items-center ml-5 gap-2">
+            <FaTelegram size={20} className="text-blue-500" />
+            <span className="text-gray-500">https//t.me/@tasojima</span>
+            </p>
+
           </div>
-          
-        </form>
+          <div className="border-l-4 border-blue-600 mt-3">
+            {/* <h1>Education Background</h1> */}
+            <table className="table-auto w-full mt-2">
+              <thead className="bg-gray-200">
+                <tr>
+                  <th className="px-4 py-2"> Years </th>
+                  <th className="px-4 py-2"> Institution</th>
+                  <th className="px-4 py-2"> Grade</th>
+                </tr>
+                </thead>
+                <tbody>
+                  <tr className="bg-gray-100">
+                    <td className="border px-4 py-2">2018-2021 G.C</td>
+                    <td className="border px-4 py-2">Mizan Tepi University</td>
+                    <td className="border px-4 py-2">BSc in Computer Science</td>
+                  </tr>
+                  <tr className="bg-gray-100">
+                    <td className="border px-4 py-2">2016-2017 G.C</td>
+                    <td className="border px-4 py-2">Gohatsion Preparatory School</td>
+                    <td className="border px-4 py-2">11-12</td>
+                  </tr>
+                  <tr className="bg-gray-100">
+                    <td className="border px-4 py-2">2014-2015 G.C</td>
+                    <td className="border px-4 py-2">Hose secondary School</td>
+                    <td className="border px-4 py-2">9-10</td>
+                  </tr>
+                  <tr className="bg-gray-100">
+                    <td className="border px-4 py-2">2005-2013 G.C</td>
+                    <td className="border px-4 py-2">J/J Mela Elementary School</td>
+                    <td className="border px-4 py-2">1-8</td>
+                  </tr>
+                </tbody>
+              </table>
+          </div>
+         </div>
+
+
+         <div className="w-2/5 h-full border-l-2 flex flex-row items-center ml-10 ">
+         <div className="w-[1px] h-full border-l-2  border-blue-500 ">
+
+         </div>
+         <div className="flex flex-col gap-2 border-b-2 border-gray-300 pb-4 ">
+          <h1 className="text-2xl font-bold text-blue-500">Work Experience</h1>
+          <p className="relative z-10  flex items-center justify-center text-sm h-20 w-20 border-2 border-blue-700 -left-10 rounded-full">2023-now</p>
+         </div>
+         </div>
+        </div>
+        
     </section>
   )
 }
