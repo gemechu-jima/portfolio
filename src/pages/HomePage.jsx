@@ -3,11 +3,11 @@ import { Helmet } from "react-helmet";
 import LeftSideCta from "../Components/LeftSideCta";
 import PageNav from "../Components/PageNav";
 import RigthsideCta from "../Components/RigthsideCta";
-import About from "../Components/About.jsx";
-import Service from "../Components/Service.jsx";
-import Skill from "../Components/Skill.jsx";
-import Portfolio from "../Components/Portfolio.jsx";
-import Contact from "../Components/Contact.jsx";
+import About from "../Components/about/About.jsx";
+import Service from "../Components/services/Service.jsx";
+import Skill from "../Components/skill/Skill.jsx";
+import Portfolio from "../Components/portfolio/Portfolio.jsx";
+import Contact from "../Components/contact/Contact.jsx";
 import Footer from "../Components/Footer.jsx";
 import Backdrop from "../Components/Backdrop.jsx";
 

@@ -1,4 +1,4 @@
-import Contact from "../Components/Contact"
+import Contact from "../Components/contact/Contact"
 import PageNav from "../Components/PageNav"
 
 function ContactPage() {

@@ -1,5 +1,5 @@
 
-import About from "../Components/About"
+import About from "../Components/about/About"
 import PageNav from "../Components/PageNav"
 function AboutPage() {
   return (

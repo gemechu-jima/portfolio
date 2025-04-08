@@ -1,5 +1,5 @@
 import PageNav from "../Components/PageNav"
-import Portfolio from "../Components/Portfolio"
+import Portfolio from "../Components/portfolio/Portfolio"
 
 
 function PortfolioPage() {

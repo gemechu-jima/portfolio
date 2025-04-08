@@ -1,4 +1,4 @@
-import Skill from '../Components/Skill'
+import Skill from '../Components/skill/Skill'
 import PageNav from '../Components/PageNav'
 function SkillPage() {
   return (

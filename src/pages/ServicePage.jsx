@@ -1,5 +1,5 @@
 import PageNav from "../Components/PageNav"
-import Service from "../Components/Service"
+import Service from "../Components/services/Service"
 
 function ServicePage() {
   return (
