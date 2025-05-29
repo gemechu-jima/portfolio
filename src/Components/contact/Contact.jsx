@@ -1,21 +1,29 @@
 import { CiMobile1 } from "react-icons/ci";
 import { MdEmail } from "react-icons/md";
 import { BsLinkedin } from "react-icons/bs";
-import { AiFillGithub } from "react-icons/ai";
-import { FaFacebook } from "react-icons/fa";
-import { AiOutlineWhatsApp } from "react-icons/ai";
-import { AiOutlineInstagram } from "react-icons/ai";
-import { FaTelegram, FaMobile, FaLinkedin, FaGithub } from "react-icons/fa";
-import { TbWorld } from "react-icons/tb";
+// import { AiFillGithub } from "react-icons/ai";
+// import { FaFacebook } from "react-icons/fa";
+// import { AiOutlineWhatsApp } from "react-icons/ai";
+// import { AiOutlineInstagram } from "react-icons/ai";
+import { FaTelegram,  FaGithub } from "react-icons/fa";
+import { useRef } from "react";
+import { useReactToPrint } from "react-to-print";
 import Language from "./Language";
 
 function Contact() {
+   const printRef = useRef();
+
+  const handlePrintPage = useReactToPrint({
+   contentRef: printRef, 
+  });
+
   return (
     <section id="contactme" className="text-center md:h-screen md:w-screen relative md:pt-10 md:mb-10 md:px-0 px-2 ">
        <div className="">
         <h1 className="font-extrabold text-blue-700 text-4xl">Contact Me</h1>
      </div> 
-      <div className="flex pb-5 flex-col w-full items-center gap-4 md:flex-row md:justify-center">
+      <div ref={printRef}
+      className="flex pb-5 flex-col w-full items-center gap-4 md:flex-row md:justify-center">
         <div className="h-full md:w-2/4 w-full   ">
           <div className="flex flex-col gap-2 border-b-2 border-gray-300 pb-4">
             <p className="ml-5 flex items-center gap-2">
@@ -116,6 +124,11 @@ function Contact() {
           <Language/>
         </div>
       </div>
+      <h1>If you need my CV you can download by one click below button</h1>
+      <h1>After you get print </h1>
+      <button onClick={handlePrintPage} className="bg-purple-600 text-white px-6 py-3 rounded-lg">Download PDF</button>
+
+
     </section>
   );
 }
