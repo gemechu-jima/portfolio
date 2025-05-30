@@ -1,5 +1,5 @@
-import React from "react";
-
+import { langs } from "../../Utils/skill";
+import ProgressBar from "../skill/ProgressBar"
 export default function Language() {
 
     
@@ -16,43 +16,21 @@ export default function Language() {
           </tr>
         </thead>
         <tbody>
-          <tr className="bg-gray-100">
-            <td className="border px-4 py-2">English</td>
-            <td className="border px-4 py-2"><HandleProgress percentage="82%" /></td>
-            <td className="border px-4 py-2"><HandleProgress percentage="70%" /></td>
-            <td className="border px-4 py-2"><HandleProgress percentage="96%" /></td>
-            <td className="border px-4 py-2"><HandleProgress percentage="93%" /></td>
-          </tr>
-          <tr className="bg-gray-100">
-            <td className="border px-4 py-2">Amharic</td>
-            <td className="border px-4 py-2"><HandleProgress percentage="100%" />  </td>
-            <td className="border px-4 py-2"><HandleProgress percentage="97%" />  </td>
-            <td className="border px-4 py-2"><HandleProgress percentage="94%" />  </td>
-            <td className="border px-4 py-2"><HandleProgress percentage="75%" />  </td>
-          </tr>
-          <tr className="bg-gray-100">
-            <td className="border  py-2">Afan Oromo</td>
-            <td className="border px-4 py-2"><HandleProgress percentage="100%" />  </td>
-            <td className="border px-4 py-2"><HandleProgress percentage="100%" />  </td>
-            <td className="border px-4 py-2"><HandleProgress percentage="99%" />  </td>
-            <td className="border px-4 py-2"><HandleProgress percentage="94%" />  </td>
-          </tr>
+          {langs.map((lang, index)=>(
+            <tr key={index} className="bg-gray-100">
+              <td>{lang.lang} </td>
+               <td className="border px-4 py-2"><ProgressBar percent={`${lang.listen}`} bg_color="bg-red-500" color={"bg-sky-500"}/></td>
+               <td className="border px-4 py-2"><ProgressBar percent={`${lang.speak}`}  bg_color="bg-red-500" color={"bg-sky-500"} /></td>
+               <td className="border px-4 py-2"><ProgressBar percent={`${lang.read}`}  bg_color="bg-red-500" color={"bg-sky-500"} /></td>
+               <td className="border px-4 py-2"><ProgressBar percent={`${lang.write}`}  bg_color="bg-red-500" color={"bg-sky-500"} /></td>
+            </tr>
+          ))}
         </tbody>
+
       </table>
     </div>
   );
 }
 
 
-const HandleProgress = ({percentage}) => {
-    return(
-        <div className="w-full rounded-lg bg-orange-500">
-        <div
-          className="rounded-lg bg-blue-600 p-1 text-center text-xs font-bold text-white"
-            style={{ width: percentage }}
-        >
-          {percentage}
-        </div>
-      </div>
-    )
-}
+      

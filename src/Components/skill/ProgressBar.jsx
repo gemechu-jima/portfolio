@@ -1,6 +1,6 @@
 
 
-export default function ProgressBar({ percent = 0}) {
+export default function ProgressBar({bg_color, color, percent = 0}) {
     const getColor=()=>{
         if(percent>=90) return 'bg-green-500'
         if(percent>=80) return 'bg-lime-500'
@@ -10,9 +10,9 @@ export default function ProgressBar({ percent = 0}) {
         return "bg-yellow-500"
     }
   return (
-    <div className="w-full bg-gray-300 rounded-full h-5 overflow-hidden  relative">
+    <div className={`w-full ${bg_color ? bg_color :"bg-gray-300"} rounded-full h-5 overflow-hidden  relative`}>
       <div
-        className={`${getColor()} h-5 transition-all duration-500`}
+        className={`${color ? color : getColor()} h-5 transition-all duration-500`}
         style={{ width: `${percent}%` }}
       />
       <span className="absolute inset-0 flex items-center justify-center text-white font-semibold">

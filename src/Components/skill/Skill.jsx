@@ -6,7 +6,7 @@ function Skill() {
   return (
     <section
       id="skill"
-      className="flex flex-col items-center bg-black pb-7 text-center text-white sm:pb-1 xl:h-screen xl:w-screen"
+      className="flex flex-col items-center dark:bg-black bg-gray-200 pb-7 text-center dark:text-white sm:pb-1 xl:h-screen xl:w-screen"
     >
       <div className="mt-14 text-6xl">
         <h1> My skill </h1>

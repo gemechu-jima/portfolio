@@ -106,14 +106,14 @@ function Contact() {
               <p className="text-gray-500">Position</p>
             </div>
             <div className="flex  items-center gap-2">
-              <p className="relative -left-8 z-10 flex h-16 w-16 items-center justify-center rounded-full bg-blue-400 text-sm  font-semibold text-white">
+              <p className="relative -left-9 z-10 flex h-[4.5rem] w-[4.5rem] items-center justify-center rounded-full bg-sky-500 text-sm  font-semibold text-white">
                 2023-now
               </p>
               <p>INSA</p>
               <p className="text-gray-500">System Software Developer</p>
             </div>
             <div className="mt-4  flex items-center gap-2">
-              <p className="relative -left-8 z-10 mt-2 flex h-16 w-16 items-center justify-center rounded-full bg-blue-400 text-sm font-semibold text-white">
+              <p className="relative -left-9 z-10 mt-2 flex h-[4.5rem] w-[4.5rem] items-center justify-center rounded-full bg-sky-500 text-sm font-semibold text-white">
                 2021-2023
               </p>
               <p>National ID Program</p>
@@ -129,8 +129,8 @@ function Contact() {
       <h1 className="mx-24   my-10 ">You get two button at the bottom-left of the page like </h1>
           <span className="px-6 mx-4 py-1 rounded-md bg-blue-600 text-white text-center ">Print</span> 
           <span className="px-6 mx-4 py-1 rounded-md bg-gray-500  text-white texy-centr">cancel </span>
-         <h1 className="mx-24  my-10 bg-yellow-600 rounded text-white"> "Do not use the buttons below. Instead, at the top-left of the page under
-           the <strong className="bg-purple-600 text-white">'Printer'section, select 'Save as PDF'</strong> 'Printer'section, select 'Save as PDF' and save the file to your local device."
+         <h1 className="mx-24  my-10 bg-yellow-600 rounded text-white">  Do not use the buttons below. Instead, at the top-left of the page under
+           the <strong className="">Printer section, select  Save as PDF</strong>  and save the file to your local device.
            </h1>
 
 

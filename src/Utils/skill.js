@@ -82,4 +82,25 @@ export const skills= {
         }
     ]
     }
+export const langs=[
+  {
+    lang:"English",
+    listen:82,
+    speak:70,
+    read:96,
+    write:93
+  },
+  {
+    lang:"Amharic",
+    listen:100,
+    speak:97,
+    read:94,
+    write:75
+  },
+  {lang:"Afan Oromo",
+    listen:100,
+    speak:100,
+    read:99,
+    write:94
+  }]
 
