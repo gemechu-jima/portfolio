@@ -129,7 +129,7 @@ function Contact() {
       <h1 className="mx-24   my-10 ">You get two button at the bottom-left of the page like </h1>
           <span className="px-6 mx-4 py-1 rounded-md bg-blue-600 text-white text-center ">Print</span> 
           <span className="px-6 mx-4 py-1 rounded-md bg-gray-500  text-white texy-centr">cancel </span>
-         <h1 className="mx-24   my-10 bg-yellow-600 rounded text-white"> "Do not use the buttons below. Instead, at the top-left of the page under
+         <h1 className="mx-24  my-10 bg-yellow-600 rounded text-white"> "Do not use the buttons below. Instead, at the top-left of the page under
            the <strong className="bg-purple-600 text-white">'Printer'section, select 'Save as PDF'</strong> 'Printer'section, select 'Save as PDF' and save the file to your local device."
            </h1>
 
