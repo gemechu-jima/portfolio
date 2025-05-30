@@ -124,9 +124,14 @@ function Contact() {
           <Language/>
         </div>
       </div>
-      <h1>If you need my CV you can download by one click below button</h1>
-      <h1>After you get print </h1>
-      <button onClick={handlePrintPage} className="bg-purple-600 text-white px-6 py-3 rounded-lg">Download PDF</button>
+      <h1 className="text-2xl mt-10 ">If you need my CV you can download by one click below button</h1>
+      <button onClick={handlePrintPage} className="bg-purple-600 text-white px-6 py-3 rounded-lg mt-5">Download PDF</button>
+      <h1 className="mx-24   my-10 ">You get two button at the bottom-left of the page like </h1>
+          <span className="px-6 mx-4 py-1 rounded-md bg-blue-600 text-white text-center ">Print</span> 
+          <span className="px-6 mx-4 py-1 rounded-md bg-gray-500  text-white texy-centr">cancel </span>
+         <h1 className="mx-24   my-10 bg-yellow-600 rounded text-white"> "Do not use the buttons below. Instead, at the top-left of the page under
+           the <strong className="bg-purple-600 text-white">'Printer'section, select 'Save as PDF'</strong> 'Printer'section, select 'Save as PDF' and save the file to your local device."
+           </h1>
 
 
     </section>
