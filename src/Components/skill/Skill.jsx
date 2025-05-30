@@ -19,7 +19,7 @@ function Skill() {
             <button
               key={category}
               onClick={() => setSelectedCategory(category)}
-              className={`${category===selectedCategory ?"bg-sky-500" :"dark:bg-gray-900 bg-white"}  dark:text-white font-extrabold font-extralight px-10 py-3 rounded-md`}
+              className={`${category===selectedCategory ?"bg-sky-500" :"dark:bg-gray-900 bg-white"}  dark:text-white font-extrabold  px-10 py-3 rounded-md`}
             >
               {category}
             </button>
@@ -29,11 +29,11 @@ function Skill() {
         <div>
           
           <h2 className=" text-4xl text-ellipsis">{selectedCategory}</h2>
-          <ul className="py-10 grid grid-cols-2 gap-6 overflow-x-auto w-[45rem] h-96 ">
+          <ul className="py-10 grid grid-cols-2 gap-6 overflow-x-auto w-[45rem] h-96 scrollWithCustom ">
             {skills[selectedCategory].map((skill) => (
-              <li key={skill.id}>
-                <div className="dark:bg-gray-900 bg-gray-400 dark:text-white py-5 rounded-lg px-10 flex flex-col my-2">
-                 <span>{skill.name}</span>
+              <li key={skill.id} className="">
+                <div className=" dark:bg-gray-900 bg-gray-400 dark:text-white py-5 rounded-lg px-10 flex flex-col my-2">
+                 <div className=" flex justify-between"><span>{skill.name}</span></div>
                  <ProgressBar percent={skill.percent}/>
                 </div>
               </li>

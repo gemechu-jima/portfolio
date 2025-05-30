@@ -13,7 +13,7 @@ import Backdrop from "../Components/Backdrop.jsx";
 
 
 function HomePage() {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(true);
   const [openSideBar, setOpenSideBar] = useState(false);
 
   useEffect(() => {

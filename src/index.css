@@ -68,4 +68,24 @@
     display: none;
    }
 
-  
+ 
+.scrollWithCustom::-webkit-scrollbar {
+  width: 12px; 
+}
+
+
+.scrollWithCustom::-webkit-scrollbar-track {
+  background: #ffffff;
+  border-radius: 10px; /* Background of track */
+}
+
+/* Scrollbar thumb */
+.scrollWithCustom::-webkit-scrollbar-thumb {
+  background: #3000db; /* Scrollbar color */
+  border-radius: 10px; /* Rounded edges */
+}
+
+/* Hover effect */
+.scrollWithCustom::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

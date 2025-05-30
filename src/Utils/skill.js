@@ -1,3 +1,4 @@
+
 export const skills= {
       "Front End Skill" :[{
         id:1,
@@ -24,9 +25,14 @@ export const skills= {
         name:"React Js",
         percent:92,
       },
+       {
+        id:101,
+        name:"Angular Js",
+        percent:50,
+      },
       {
         id:6,
-        name:"TailWndcss ",
+        name:"Tailwindcss ",
         percent:95,
       },
       {
@@ -34,6 +40,11 @@ export const skills= {
         name:"Bootstrap",
         percent:80,
       },
+      {
+        id:8,
+        name:"Bulma",
+        percent:60
+      }
     ],
     "Back End Skill":[
         {
@@ -50,6 +61,16 @@ export const skills= {
             id:6,
             name:"PHP",
             percent:80
+        },
+         {
+            id:7,
+            name:"Express JS",
+            percent:85
+        },
+         {
+            id:8,
+            name:"API Configration",
+            percent:95
         }
     ],
     "Database Skill":[
