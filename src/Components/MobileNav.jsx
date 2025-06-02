@@ -21,7 +21,7 @@ function MobileNav() {
         className={`flex cursor-pointer flex-col ${darkMode && "text-white"}`}
       >
         {!openSideBar && (
-          <div className={`flex items-center gap-5 `}>
+          <div className={`flex items-center gap-5 text-sky-500`}>
             <VscThreeBars onClick={handleClick} />
           </div>
         )}
