@@ -18,7 +18,6 @@ function Service() {
             <button className="bg-purple-700 text-white  rounded-3xl mt-10 px-4 py-2 z-20" onClick={()=>setshow(1)}>Read More <FaArrowRight className="inline"/> </button>
            </div>
           </div>
-          <div className={`${show ?"":"" }`}></div>
           <div className="relative  py-2 h-72 sm:h-full xl:h-[25rem]  flex items-center justify-center rounded-3xl bg-slate-500 hover:scale-110 bg-cover overflow-hidden  ">
            
             <div className="flex flex-col items-center justify-between relative  text-center   mx-5 box-border  text-black">

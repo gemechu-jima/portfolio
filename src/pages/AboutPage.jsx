@@ -5,7 +5,7 @@ function AboutPage() {
   return (
     <>
       <PageNav/>
-      <About/>
+      <About />
     </>
     
   )

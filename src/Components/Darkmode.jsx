@@ -1,7 +1,8 @@
+import { AppContext } from "../context/Context"
 
 
-function Darkmode({setDarkMode, darkMode}) {
-
+function Darkmode() {
+const {setDarkMode, darkMode}=AppContext()
   return (
     <button onClick={()=>setDarkMode(!darkMode)} className="mr-4">
       {  darkMode?

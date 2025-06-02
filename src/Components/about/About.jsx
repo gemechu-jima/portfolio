@@ -1,13 +1,15 @@
+import { AppContext } from "../../context/Context"
 
 
-function About(props) {
+function About() {
+  const {darkMode}=AppContext()
   return (
     <div id="aboutme"  className="md:w-screen md:h-screen-[-5rem] relative flex flex-col items-center 
     justify-center gap-2 dark:bg-black bg-white text-white dark:text-white overflow-hidden">
       <h1 className="text-3xl mt-20 dark:text-white text-black">About <span className="text-purple-700">Me</span></h1>
       <div className="flex sm:flex-row flex-col justify-between w-3/4 sm:h-3/4 mx-20 sm:my-20 gap-5">
             <div className="relative sm:w-2/5 w-full h-3/5 flex items-center justify-center">
-             {props.darkMode ?  <img src="image/Bg-black.jpg" />:<img src="image/Bg-white.jpg" />} 
+              <img src={`image/Bg-${darkMode ? "black":"white"}.jpg`} />
             </div>
           <div className="sm:w-4/6  w-full flex flex-col justify-center items-center sm:gap-10 gap-1 px-6 box-border">
               <h1 className="sm:text-3xl  font-serif text-center dark:text-white text-black "> My Name is Gemechu Jima</h1>
@@ -15,7 +17,7 @@ function About(props) {
               <div className="bg-slate-800  sm:w-40 sm:h-40 w-60 h-60 rounded-lg flex flex-col
                items-center justify-center sm:gap-4 gap-8 text-white">
                 <img src="icons/experience.png" />
-                <p>Experience <span>1 + years</span></p>
+                <p>Experience <span>2 + years</span></p>
                
               </div>
               <div className="bg-slate-800  sm:w-40 sm:h-40 w-60 h-60 rounded-lg flex flex-col 

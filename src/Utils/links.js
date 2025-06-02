@@ -13,24 +13,24 @@
     },
     {
         id:3,
-        link:"service",
-        name:"service",
-    },
-    {
-        id:4,
         link:"portfolio",
         name:"Portfolio"
     },
     {
+        id:4,
+        link:"service",
+        name:"service",
+    },
+    {
         id:5,
-        link:"contactme",
-        name:"Contact Me"
+        link:"skill",
+        name:"Skill"
     },
     {
         id:6,
-        link:"skill",
-        name:"Skill"
-    }
+        link:"contactme",
+        name:"Contact Me"
+    },
 
 ]
 export default Links;

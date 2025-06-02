@@ -12,7 +12,7 @@ function Skill() {
         <h1> My skill </h1>
       </div>
 
-      <div className="w-min-[50%] mx-auto h-full my-auto mt-10 flex sm:flex-row md:gap-36 items-center">
+      <div className="w-min-[50%] mx-auto h-full my-auto mt-10 flex sm:flex-row flex-col md:gap-36 items-center">
         <div className="flex flex-col gap-3">
           <h1 className="text-3xl my-4 ">My profession skill </h1>
           {Object.keys(skills).map((category) => (
@@ -27,9 +27,8 @@ function Skill() {
         </div>
 
         <div>
-          
           <h2 className=" text-4xl text-ellipsis">{selectedCategory}</h2>
-          <ul className="py-10 grid grid-cols-2 gap-6 overflow-x-auto w-[45rem] h-96 scrollWithCustom ">
+          <ul className="py-10 grid sm:grid-cols-2 grid-cols-1 gap-6 overflow-x-auto w-[45rem] h-96 scrollWithCustom ">
             {skills[selectedCategory].map((skill) => (
               <li key={skill.id} className="">
                 <div className=" dark:bg-gray-900 bg-gray-400 dark:text-white py-5 rounded-lg px-10 flex flex-col my-2">

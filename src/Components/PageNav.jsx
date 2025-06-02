@@ -1,12 +1,16 @@
-// import PropTypes from 'prop-types';
+
 import classNames from "classnames";
+import { useContext, useEffect} from "react";
 import Logo from "./Logo";
 import Nav from "./Nav";
 import Darkmode from "./Darkmode";
 import MobileNav from "./MobileNav";
-import { useEffect, useState } from "react";
-function PageNav({ setDarkMode, darkMode, openSideBar, setOpenSideBar }) {
-  const [active, setActive] = useState(null);
+import Backdrop from "./Backdrop";
+import {GlobalContext} from "../context/Context.jsx";
+function PageNav() {
+const {darkMode, setDarkMode, active, setActive, setOpenSideBar ,openSideBar}=useContext(GlobalContext)
+
+  
 
   const handleActive = (ev, link) => {
     ev.preventDefault();
@@ -49,18 +53,17 @@ function PageNav({ setDarkMode, darkMode, openSideBar, setOpenSideBar }) {
 
   return (
     <nav className="fixed inset-x-0 top-0 z-40 flex items-center bg-white px-3  dark:bg-black">
+      {openSideBar && <Backdrop onClick={() => setOpenSideBar(false)} />}
       <div className="flex-grow">
-        <Logo darkMode={darkMode} handleActive={handleActive} />
+        <Logo />
       </div>
 
       <Nav
         Linkess={Linkess}
-        setDarkMode={setDarkMode}
-        darkMode={darkMode}
         handleActive={handleActive}
         active={active}
       />
-      <Darkmode setDarkMode={setDarkMode} darkMode={darkMode} />
+      <Darkmode />
       <MobileNav
         Linkess={Linkess}
         setDarkMode={setDarkMode}

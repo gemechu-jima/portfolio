@@ -2,7 +2,6 @@
 import { VscThreeBars } from "react-icons/vsc";
 import { ImCross } from "react-icons/im";
 import { NavLink } from "react-router-dom";
-import { useState } from "react";
 function MobileNav({Linkess, darkMode, openSideBar, setOpenSideBar}) {
   const handleClick=()=>{
     setOpenSideBar(openSideBar=>!openSideBar)
