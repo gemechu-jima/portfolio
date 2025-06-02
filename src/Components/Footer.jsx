@@ -87,8 +87,8 @@ function footer() {
    const classnames=classNames("p-2 rounded-2xl border-collapse  border-solid border-2 border-indigo-500 focus:outline-none focus:ring focus:ring-indigo-500 ")
 
   return (
-    <section className="relative h-screen w-screen bg-slate-500">
-      <form  className="relative sm:w-2/4 sm:m-auto m-10 rounded-md sm:mt-10 mt-5 mx-2 grid sm:grid-cols-2 gap-2  z-50 bg-slate-50 p-4 " onSubmit={handleSubmit}>
+    <section className="relative h-screen w-screen bg-slate-500 pt-10">
+      <form  className="relative  sm:w-2/4 sm:m-auto  rounded-md  mx-2 grid sm:grid-cols-2 gap-2  bg-slate-50 p-4 " onSubmit={handleSubmit}>
           <input placeholder="Enter Your Full name" 
            className={`${classnames} sm:col-span-2`}
            name="name"
@@ -121,7 +121,7 @@ function footer() {
           </div>
           
         </form>
-      <footer className="relative inset-x-2 bottom-0 overflow-hidden rounded-t-lg bg-black text-center text-white sm:absolute sm:h-4/6">
+      <footer className="relative inset-x-2  bottom-0 overflow-hidden rounded-t-lg bg-black text-center text-white sm:absolute sm:h-2/5">
       
         <img src="image/blackLogo.jpg" className="flex sm:hidden" />
         <div className=" flex  flex-row items-center text-white sm:m-auto sm:mt-44  sm:w-4/6 sm:justify-between sm:gap-5 ">

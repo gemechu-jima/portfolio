@@ -4,7 +4,7 @@ import { AppContext } from "../../context/Context"
 function About() {
   const {darkMode}=AppContext()
   return (
-    <div id="aboutme"  className="md:w-screen md:h-screen-[-5rem] relative flex flex-col items-center 
+    <div id="aboutme"  className="md:w-screen md:h-screen relative flex flex-col items-center 
     justify-center gap-2 dark:bg-black bg-white text-white dark:text-white overflow-hidden">
       <h1 className="text-3xl mt-20 dark:text-white text-black">About <span className="text-purple-700">Me</span></h1>
       <div className="flex sm:flex-row flex-col justify-between w-3/4 sm:h-3/4 mx-20 sm:my-20 gap-5">

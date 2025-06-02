@@ -6,13 +6,13 @@ function Skill() {
   return (
     <section
       id="skill"
-      className="flex flex-col items-center dark:bg-black bg-gray-200 pb-7 text-center dark:text-white sm:pb-1 xl:h-screen xl:w-screen"
+      className="flex flex-col items-center dark:bg-black bg-gray-200 pb-7 text-center dark:text-white sm:pb-1 xl:h-screen xl:w-screen relative"
     >
       <div className="mt-14 text-6xl">
         <h1> My skill </h1>
       </div>
 
-      <div className="w-min-[50%] mx-auto h-full my-auto mt-10 flex sm:flex-row flex-col md:gap-36 items-center">
+      <div className="w-min-[50%] mx-auto h-full my-auto mt-10 flex sm:flex-row flex-col md:gap-36 items-center  p-3 rounded">
         <div className="flex flex-col gap-3">
           <h1 className="text-3xl my-4 ">My profession skill </h1>
           {Object.keys(skills).map((category) => (
@@ -28,7 +28,7 @@ function Skill() {
 
         <div>
           <h2 className=" text-4xl text-ellipsis">{selectedCategory}</h2>
-          <ul className="py-10 grid sm:grid-cols-2 grid-cols-1 gap-6 overflow-x-auto w-[45rem] h-96 scrollWithCustom ">
+          <ul className="py-10 grid sm:grid-cols-2 grid-cols-1 gap-6 overflow-x-auto md:w-[45rem] h-96 scrollWithCustom ">
             {skills[selectedCategory].map((skill) => (
               <li key={skill.id} className="">
                 <div className=" dark:bg-gray-900 bg-gray-400 dark:text-white py-5 rounded-lg px-10 flex flex-col my-2">

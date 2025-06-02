@@ -1,7 +1,9 @@
+import { AppContext } from "../context/Context";
 import Links from "../Utils/links";
-function Nav({ Linkess, handleActive, active }) {
+function Nav() {
+  const {handleActive, active, Linkess}=AppContext()
   return (
-    <ul
+    <ul 
       className="hidden list-none items-center justify-between 
            gap-2 dark:text-white md:flex"
     >
