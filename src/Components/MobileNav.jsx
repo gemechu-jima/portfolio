@@ -50,8 +50,8 @@ function MobileNav() {
                 className={Linkess}
                 key={link.id}
                 onClick={(ev) => {
-                  handleClick(); // Your first click handler
-                  handleActive(ev, link.link); // Your scroll / navigation handler
+                  handleClick(); 
+                  handleActive(ev, link.link); 
                 }}
               >
                 <a

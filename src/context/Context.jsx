@@ -3,7 +3,7 @@ import classNames from "classnames";
 import { useNavigate } from 'react-router-dom';
 export const GlobalContext = createContext();
   let Linkess = classNames(
-    "hover:border-solid hover:border-y-2 hover:border-sky-500  px-3 py-2 transition-all duration-300 rounded  hover:font-bold ",
+    "hover:border-solid hover:border-y-2 hover:border-sky-500  px-3 py-2 transition-all duration-300 rounded  hover:font-bold dark:text-black text-white",
   );
 export default function ContextProvider({ children }) {
   const [active, setActive] = useState(null);

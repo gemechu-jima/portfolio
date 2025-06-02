@@ -6,7 +6,7 @@ function Nav() {
   return (
     <ul 
       className="hidden list-none items-center justify-between 
-           gap-2 dark:text-white md:flex"
+           gap-2 dark:text-dark md:flex text-white"
     >
       {Links.map((link) => (
         <li className={Linkess} key={link.id}>
