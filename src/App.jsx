@@ -1,6 +1,6 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom"
+import { Route, Routes } from "react-router-dom"
 import { useState } from "react"
-// import HomePage from "./pages/HomePage"
+import HomePage from "./pages/HomePage"
 import AboutPage from "./pages/AboutPage"
 import ServicePage from "./pages/ServicePage"
 import PortfolioPage from "./pages/PortfolioPage"
@@ -16,11 +16,11 @@ function App() {
 const [openSideBar, setOpenSideBar] = useState(false);
 
   return (
-  <BrowserRouter >
+  < >
  <PageNav darkMode={darkMode} setDarkMode={setDarkMode} openSideBar={openSideBar} setOpenSideBar={setOpenSideBar} />
    <Routes>
     <Route index element={<AppLayout/>}/>
-    {/* <Route path="/" element={<HomePage/>}/> */}
+    <Route path="/" element={<HomePage/>}/>
     <Route path="/aboutme" element={<AboutPage darkMode={darkMode}/>}/>
     <Route path="/service" element={<ServicePage/>}/>
     <Route path="/portfolio" element={<PortfolioPage/>}/>
@@ -28,7 +28,7 @@ const [openSideBar, setOpenSideBar] = useState(false);
     <Route path="/skill" element={<SkillPage/>}/>
    </Routes>
    <Footer/>
-    </BrowserRouter>
+    </>
   )
 }
 

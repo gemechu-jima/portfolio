@@ -1,5 +1,6 @@
 import { AppContext } from "../context/Context";
 import Links from "../Utils/links";
+
 function Nav() {
   const {handleActive, active, Linkess}=AppContext()
   return (
@@ -10,7 +11,7 @@ function Nav() {
       {Links.map((link) => (
         <li className={Linkess} key={link.id}>
           <a
-            href={"#"}
+            href={`#${link.link}`}
             className={link.link === active ? "font-bold text-blue-500 " : ""}
             onClick={(ev) => handleActive(ev, link.link)}
           >

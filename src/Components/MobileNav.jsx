@@ -1,63 +1,96 @@
-
 import { VscThreeBars } from "react-icons/vsc";
 import { ImCross } from "react-icons/im";
 import { NavLink } from "react-router-dom";
 import { AppContext } from "../context/Context";
+import Links from "../Utils/links";
 function MobileNav() {
-  const { darkMode, openSideBar, setOpenSideBar,Linkess}=AppContext()
-  const handleClick=()=>{
-    setOpenSideBar(openSideBar=>!openSideBar)
-  }
+  const {
+    darkMode,
+    openSideBar,
+    setOpenSideBar,
+    Linkess,
+    handleActive,
+    active,
+  } = AppContext();
+  const handleClick = () => {
+    setOpenSideBar((openSideBar) => !openSideBar);
+  };
   return (
-    <div className="md:hidden mt-3 mr-2" >
-        <div className={`flex flex-col cursor-pointer ${darkMode && "text-white"}`} >
-           { 
-          !openSideBar && 
+    <div className="mr-2 mt-3 md:hidden">
+      <div
+        className={`flex cursor-pointer flex-col ${darkMode && "text-white"}`}
+      >
+        {!openSideBar && (
           <div className={`flex items-center gap-5 `}>
-          <VscThreeBars onClick={handleClick}/>
+            <VscThreeBars onClick={handleClick} />
           </div>
-          
-            }
-        </div>
-        {openSideBar && <>
-              
-              <ul className="flex  md:hidden  items-center flex-col
-               bg-slate-600 fixed z-[10000]
-               left-0 bottom-0 top-0 pt-2 text-white
-                gap-7 transition-all duration-3000 w-[75%]  ">
-              <h1><img src="image/gj.jpg" className="rounded-full w-10 h-10 inline pr-1"/>Gemechu </h1>
-              <ImCross className="absolute top-4 right-3 text-red-600" onClick={handleClick}/>
-              <li className={Linkess} onClick={handleClick}> 
-              <a href="#home">Home</a>
+        )}
+      </div>
+      {openSideBar && (
+        <>
+          <ul
+            className="duration-3000  fixed  bottom-0 left-0
+               top-0 z-[10000] flex
+               w-[75%] flex-col items-center gap-7 bg-slate-600
+                pt-2 text-white transition-all md:hidden  "
+          >
+            <h1>
+              <img
+                src="image/gj.jpg"
+                className="inline h-10 w-10 rounded-full pr-1"
+              />
+              Gemechu{" "}
+            </h1>
+            <ImCross
+              className="absolute right-3 top-4 text-red-600"
+              onClick={handleClick}
+            />
+            {Links.map((link) => (
+              <li
+                className={Linkess}
+                key={link.id}
+                onClick={(ev) => {
+                  handleClick(); // Your first click handler
+                  handleActive(ev, link.link); // Your scroll / navigation handler
+                }}
+              >
+                <a
+                  href={`#${link.link}`}
+                  className={
+                    link.link === active ? "font-bold text-blue-500 " : ""
+                  }
+                >
+                  <span>{link.name}</span>
+                </a>
               </li>
-              <li className={Linkess +"aboutme"} onClick={handleClick}> 
-                  <a href="#aboutme">About Me</a>
-              </li>
-              <li className={Linkess+"service"} onClick={handleClick}> 
-                  <a href="#service">Service</a>
-              </li>
-              <li className={Linkess + "portfolio"} onClick={handleClick}> 
-                  <a href="#portfolio">Portfolio</a>
-            </li > 
-              <li className={Linkess +"contactme"} onClick={handleClick}> 
-                  <a href="#contactme">Contact Me</a>
-              </li>
-              <li className={Linkess +"skill"} onClick={handleClick}> 
-                  <a href="#skill">skill</a>
-              </li>  
-            <hr/>
+            ))}
+            <hr />
             <div className="mt-10">
-            <NavLink to="https://github.com/gemechu-jima"> <img src="social media/facebook.png" 
-            className="w-8 h-8 inline rounded-full"/></NavLink>
-             <img src="social media/linkedin.png" className="w-8 h-8 inline ml-2"/>
-             <img src="social media/twitter.png" className="w-8 h-8 inline ml-2"/>
-             <img src="social media/github.png" className="w-8 h-8 inline ml-2"/>
-             </div>
-             </ul>
-
-            </>}
+              <NavLink to="https://github.com/gemechu-jima">
+                {" "}
+                <img
+                  src="social media/facebook.png"
+                  className="inline h-8 w-8 rounded-full"
+                />
+              </NavLink>
+              <img
+                src="social media/linkedin.png"
+                className="ml-2 inline h-8 w-8"
+              />
+              <img
+                src="social media/twitter.png"
+                className="ml-2 inline h-8 w-8"
+              />
+              <img
+                src="social media/github.png"
+                className="ml-2 inline h-8 w-8"
+              />
+            </div>
+          </ul>
+        </>
+      )}
     </div>
-  )
+  );
 }
 
-export default MobileNav
+export default MobileNav;

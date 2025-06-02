@@ -1,6 +1,6 @@
 import { useEffect, useState, createContext, useContext } from 'react';
 import classNames from "classnames";
-
+import { useNavigate } from 'react-router-dom';
 export const GlobalContext = createContext();
   let Linkess = classNames(
     "hover:border-solid hover:border-y-2 hover:border-sky-500  px-3 py-2 transition-all duration-300 rounded  hover:font-bold ",
@@ -9,11 +9,17 @@ export default function ContextProvider({ children }) {
   const [active, setActive] = useState(null);
   const [darkMode, setDarkMode] = useState(true);
   const [openSideBar, setOpenSideBar] = useState(false);
+const navigate=useNavigate()
  const handleActive = (ev, link) => {
     ev.preventDefault();
     ev.stopPropagation();
     const elementToView = document.getElementById(link);
-    elementToView?.scrollIntoView();
+    if(elementToView){
+      elementToView.scrollIntoView();
+    }else{
+       navigate(`/${link}`);
+    }
+    
     setActive(link);
   };
 
@@ -47,22 +53,7 @@ export default function ContextProvider({ children }) {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [handleActive, active]);
-
-  //visits with a URL like #service
-
-  useEffect(() => {
-  const hash = window.location.hash;
-  if (hash) {
-    const sectionId = hash.substring(0); // remove the #
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-      setActive(sectionId);
-    }
-  }
-}, []);
-
+  }, [active]);
 
   return (
     <GlobalContext.Provider value={{ darkMode, active, setActive, setDarkMode, openSideBar, setOpenSideBar, handleActive,Linkess }}>
