@@ -4,9 +4,6 @@ function Portfolio() {
     const  className1=classNames(`flex flex-col items-center transition duration-1000 
        translate-y-[-100%] group-hover:translate-y-0 bg-gradient-to-b to-transparent from-black
      justify-center absolute  inset-0 rounded-2xl text-center   box-border `);
-    //  const className2=classNames(`flex flex-col items-center hover:opacity-10 
-    //   transition duration-1000 opacity-100 bg-slate-500 hover:bg-opacity-0
-    //  justify-center absolute  inset-0 rounded-2xl text-center  box-border  `);
   return ( 
     <section id="portfolio" className={`md:w-screen md:h-screen
       relative flex flex-col items-center justify-center

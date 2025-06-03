@@ -100,16 +100,26 @@ export const skills= {
             id:8,
             name:"Kubrenates",
             percent:70
+        },
+        {
+            id:9,
+            name:"version Control",
+            percent:90
+        },
+         {
+            id:11,
+            name:"CI/CD",
+            percent:70
         }
     ]
     }
 export const langs=[
   {
     lang:"English",
-    listen:82,
+    listen:84,
     speak:70,
     read:96,
-    write:93
+    write:83
   },
   {
     lang:"Amharic",

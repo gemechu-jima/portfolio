@@ -27,6 +27,12 @@ function Contact() {
         <div className="h-full md:w-2/4 w-full   ">
           <div className="flex flex-col gap-2 border-b-2 border-gray-300 pb-4">
             <p className="ml-5 flex items-center gap-2">
+              <img src="image/Mine.jpg" width={20} height={20} className="rounded-full cursor-pointer"/>
+              <span className="text-gray-500">
+                Gemechu Jima
+              </span>
+            </p>
+            <p className="ml-5 flex items-center gap-2">
               <CiMobile1 size={20} className="text-blue-500" />
               <span className="text-gray-500">
                 +251930851744 / +251712313085
@@ -126,10 +132,10 @@ function Contact() {
       </div>
       <h1 className="text-2xl mt-10 ">If you need my CV you can download by one click below button</h1>
       <button onClick={handlePrintPage} className="bg-purple-600 text-white px-6 py-3 rounded-lg mt-5">Download PDF</button>
-      <h1 className="mx-24   my-10 ">You get two button at the bottom-left of the page like </h1>
+      <h1 className="mx-24   my-10 ">You get two button at the bottom-left of the page like the below button do not use them  </h1>
           <span className="px-6 mx-4 py-1 rounded-md bg-blue-600 text-white text-center ">Print</span> 
           <span className="px-6 mx-4 py-1 rounded-md bg-gray-500  text-white texy-centr">cancel </span>
-         <h1 className="mx-24  my-10 bg-yellow-600 rounded text-white">  Do not use the buttons below. Instead, at the top-left of the page under
+         <h1 className="mx-24  my-10 bg-yellow-600 rounded text-white">  Do not use the buttons above. Instead, at the top-left of the page under
            the <strong className="">Printer section, select  Save as PDF</strong>  and save the file to your local device.
            </h1>
 

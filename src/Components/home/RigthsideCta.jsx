@@ -23,10 +23,13 @@ function RigthsideCta() {
              accusamus quos quibusdam quae cum quaerat, iste delectus.
              </p>
         </div>
-             <div className="flex justify-between w-72 ">
+             <div className="flex justify-between gap-5 sm:w-96 ">
                 <button className="bg-fuchsia-500 px-3 p-2 border rounded-full">
-                    <Link to="/files/Gemechu Jima CV.pdf" target="_blank" download> Download CV</Link> </button>
-                <button className="bg-blue-600 text-fuchsia-500 border rounded-full border-fuchsia-800 px-10 py-2 ">Join</button>
+                    <Link to="/files/Gemechu Jima CV.pdf" target="_blank" download> Download CV</Link>
+                 </button>
+                <button className="bg-blue-600 text-white border rounded-full border-fuchsia-800 px-10 py-2 ">
+                    <a href="#contactme">Contact Me</a>
+                </button>
              </div>
             
     </aside>
