@@ -18,7 +18,7 @@ function MobileNav() {
   return (
     <div className="mr-2 mt-3 md:hidden">
       <div
-        className={`flex cursor-pointer flex-col ${darkMode && "text-white"}`}
+        className={`flex cursor-pointer flex-col ${darkMode && "text-black"}`}
       >
         {!openSideBar && (
           <div className={`flex items-center gap-5 text-sky-500`}>
@@ -31,7 +31,7 @@ function MobileNav() {
           <ul
             className="duration-3000  fixed  bottom-0 left-0
                top-0 z-[10000] flex
-               w-[75%] flex-col items-center gap-7 bg-slate-600
+               w-[60%] flex-col items-center gap-7 bg-slate-600
                 pt-2 text-white transition-all md:hidden  "
           >
             <h1>
